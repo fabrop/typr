@@ -119,10 +119,11 @@ body {
     float: left;
 }
 .article-img {
+    display: block;
     width: 20%;
     height: 150px;
     float: left;
-    margin: 30px 4% 0 6%;
+    margin: 30px 4% 0 4%;
     background-color: #9f9f9f;
 }
 
@@ -155,12 +156,39 @@ body {
     color: #9f9f9f;
 }
 
-@media only screen and (max-width: 1300px) {
-    .article {
-        width: 100%;
+@media only screen and (max-width: 1500px) {
+    .article-text {
+        width: 95%;
+    }
+    .article-img {
+        float: none;
+        width: 40%;
+        margin: 0 auto;
     }
 }
-
+@media only screen and (max-width: 1300px) {
+    .article {
+        width: 80%;
+    }
+    .article-text {
+        width: calc(70% - 30px);
+    }
+    .article-img {
+        float: right;
+        width: 30%;
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .article-text {
+        width: 95%;
+    }
+    .article-img {
+        width: 50%;
+        30px auto 0;
+        float: none;
+    }
+}
 
 @media only screen and (max-width: 750px) {
     #card {
@@ -186,6 +214,9 @@ body {
     }
     .article-head {
         font-size: 2.8em;
+    }
+    .article-img {
+        width: 80%;
     }
     
     #navigation {
