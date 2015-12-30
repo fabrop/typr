@@ -1,0 +1,37 @@
+body {
+    background-color: #484848;
+}
+#card {
+    background-color: white;
+    display: block;
+    width: 60%;
+    padding: 20px;
+    margin: 100px auto;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+
+form {
+    margin: 0;
+}
+.input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    float: left;
+}
+
+#save {
+    background-color: #33cc99;
+    border: 2px solid #33cc99;
+    display: block;
+    margin: 0 auto;
+    padding: 8px 50px;
+    color: white;
+    font-size: 1.2em;
+    transition: all 500ms ease;
+}
+#save:hover {
+    color: #33cc99;
+    border: 2px solid #33cc99;
+    background-color: white;
+}
