@@ -83,7 +83,14 @@ body {
     display: inline-block;
     width: 100px;
     color: #484848;
+    transition-property: border;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
 }
+.card-link:hover {
+    border: 1px solid #33cc99;
+}
+
 
 
 
@@ -133,7 +140,7 @@ body {
 #navigation li {
     display: inline;
     margin: 4px 0;
-    padding: 4px 18px;
+    padding: 4px 22px;
     border-left: 1px solid #9f9f9f;
 }
 #navigation li:first-child {
@@ -141,8 +148,11 @@ body {
 }
 .nav-link {
     color: #33cc99;
+    transition: color 300ms ease;
 }
-
+.nav-link:hover {
+    color: #9f9f9f;
+}
 
 
 

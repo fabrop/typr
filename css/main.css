@@ -7,3 +7,8 @@ body {
 a, a:hover, a:visited, a:link, a:active {
     text-decoration: none;
 }
+
+::selection {
+    color: #ffffff; 
+    background-color: rgba(0,0,0,0.5);
+}
