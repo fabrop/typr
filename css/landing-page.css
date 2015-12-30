@@ -107,7 +107,7 @@ body {
     float: left;
 }
 .article-head {
-    margin: 0 0 10px 25px;
+    margin: 0 25px 10px 25px;
     font-size: 1.6em;
 }
 .article hr {
@@ -123,7 +123,7 @@ body {
     width: 20%;
     height: 150px;
     float: left;
-    margin: 30px 4% 0 4%;
+    margin: 30px 4% 30px 4%;
     background-color: #9f9f9f;
 }
 
@@ -163,12 +163,14 @@ body {
     .article-img {
         float: none;
         width: 40%;
-        margin: 0 auto;
+        margin: 30px auto;
     }
 }
 @media only screen and (max-width: 1300px) {
     .article {
-        width: 80%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
     }
     .article-text {
         width: calc(70% - 30px);
@@ -213,7 +215,7 @@ body {
         padding: 10px 0;
     }
     .article-head {
-        font-size: 2.8em;
+        font-size: 2em;
     }
     .article-img {
         width: 80%;
