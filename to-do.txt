@@ -1,0 +1,5 @@
+- formular landing page admin
+- blog seite
+- portfolio seite
+- datenbank tabellen/sql
+- dynamisches generieren index.php
