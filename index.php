@@ -4,7 +4,6 @@
 		<title>Typr</title>
         <link href="./css/main.css" type="text/css" rel="stylesheet"/>
         <link href="./css/landing-page.css" type="text/css" rel="stylesheet"/>
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 	</head>
 	
 	<body>
