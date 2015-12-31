@@ -100,6 +100,7 @@ body {
     padding: 20px 10%;
     color: #d1d1d1;
     overflow: auto;
+    border-top: 7px solid #383838;
 }
 .article {
     width: 48%;
@@ -130,6 +131,7 @@ body {
 
 
 #footer {
+    border-top: 7px solid #383838;
     background-color: #212121;
     padding: 20px 30%;
 }
@@ -197,6 +199,7 @@ body {
         width: 80%;
         min-width: 0;
         padding: 15px 8px;
+        margin: 80px auto;
     }
     #card-img, #card-txt {
         float: none;

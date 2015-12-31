@@ -1,17 +1,21 @@
 body {
     background-color: #484848;
 }
-#card {
+.card {
     background-color: white;
     display: block;
     width: 60%;
-    padding: 20px;
-    margin: 100px auto;
+    padding: 20px 20px 5px 20px;
+    margin: 50px auto;
     box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    overflow: auto;
 }
 
 form {
     margin: 0;
+}
+fieldset {
+    margin: 5px 0;
 }
 .input {
     display: block;
