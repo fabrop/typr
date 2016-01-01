@@ -2,9 +2,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Typr-Admin</title>
-        <link href="../css/main.css" type="text/css" rel="stylesheet"/>
-        <link href="../css/landing-admin.css" type="text/css" rel="stylesheet"/>
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+        <link href="../css/main.css" type="text/css" rel="stylesheet">
+        <link href="../css/admin-landing.css" type="text/css" rel="stylesheet">
+        <link href="../img/favicon.png" type="image/png" rel="icon">
 	</head>
 	
 	<body>
@@ -94,6 +94,11 @@
                 </div>
                 
             </form>
+        </div>
+        
+        <div id="link">
+            <img src="../img/back-arrow.png">
+            <a href="../index.php">Zur&uuml;ck zur Startseite</a>
         </div>
     </body>
 </html>

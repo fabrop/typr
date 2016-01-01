@@ -73,3 +73,31 @@ textarea:not(#desc) {
     background-color: white;
 }
 
+#link {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto 100px;
+    font-weight: 300;
+    display: block;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 0;
+}
+#link img {
+    height: 20px;
+    width: auto;
+    opacity: 0.5;
+    padding: 6px 6px 0 0;
+}
+#link a {
+    color: #9f9f9f;
+}
+#link:hover a {
+    color: #d1d1d1;
+}
+#link:hover img {
+    opacity: 0.8;
+}
+
+
+

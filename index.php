@@ -2,8 +2,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Typr</title>
-        <link href="./css/main.css" type="text/css" rel="stylesheet"/>
-        <link href="./css/landing-page.css" type="text/css" rel="stylesheet"/>
+        <link href="./css/main.css" type="text/css" rel="stylesheet">
+        <link href="./css/landing.css" type="text/css" rel="stylesheet">
+        <link href="./img/favicon.png" type="image/png" rel="icon">
 	</head>
 	
 	<body>
@@ -67,7 +68,7 @@
                     <li><a href="./pages/blog.php" class="nav-link">Blog</a></li>
                     <li><a href="./pages/portfolio.php" class="nav-link">Portfolio</a></li>
                     <li><a href="./pages/contact.php" class="nav-link">Contact</a></li>
-                    <li><a href="./admin/landing.php" class="nav-link">Admin</a></li>
+                    <li><a href="./admin/admin-landing.php" class="nav-link">Admin</a></li>
                 </ul>
             </nav>
         </div>
