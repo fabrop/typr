@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Typr</title>
+		<title>Home</title>
         <link href="./css/main.css" type="text/css" rel="stylesheet">
         <link href="./css/landing.css" type="text/css" rel="stylesheet">
         <link href="./img/favicon.png" type="image/png" rel="icon">
