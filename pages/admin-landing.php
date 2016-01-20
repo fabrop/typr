@@ -9,7 +9,7 @@
 	
 	<body>
         <div class="card">
-            <form action="landing.php" method="post">
+            <form action="admin-landing.php" method="post">
                 <fieldset>
                     <legend>Startseite</legend>
                     <div class="input">
@@ -36,7 +36,7 @@
         </div>
         
         <div class="card">
-            <form action="landing.php" method="post">
+            <form action="admin-landing.php" method="post">
                 <fieldset>
                     <legend>Artikel 1</legend>
                     <div class="input">

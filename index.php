@@ -68,7 +68,7 @@
                     <li><a href="./pages/blog.php" class="nav-link">Blog</a></li>
                     <li><a href="./pages/portfolio.php" class="nav-link">Portfolio</a></li>
                     <li><a href="./pages/contact.php" class="nav-link">Contact</a></li>
-                    <li><a href="./admin/admin-landing.php" class="nav-link">Admin</a></li>
+                    <li><a href="./pages/admin-landing.php" class="nav-link">Admin</a></li>
                 </ul>
             </nav>
         </div>
