@@ -24,7 +24,7 @@
                 <h2 id="card-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</h2>
                 <div id="card-links">    
                     <a class="card-link" href="./pages/blog.php">Blog</a>
-                    <a class="card-link" href="./pages/gallery.php">Gallery</a>
+                    <a class="card-link" href="./pages/gallery.php">Gallerie</a>
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
             <nav>
                 <ul id="navigation">
                     <li><a href="./pages/blog.php" class="nav-link">Blog</a></li>
-                    <li><a href="./pages/gallery.php" class="nav-link">Gallery</a></li>
+                    <li><a href="./pages/gallery.php" class="nav-link">Gallerie</a></li>
                     <li><a href="./pages/contact.php" class="nav-link">Contact</a></li>
                     <li><a href="./pages/admin-landing.php" class="nav-link">Admin</a></li>
                 </ul>

@@ -1,0 +1,10 @@
+#FFFFFF (weiß)
+#d1d1d1 (grau1)
+#9f9f9f (grau2)
+#484848 (grau3)
+#383838 (grau4)
+#212121 (grau5)
+#000000 (schwarz)
+
+#33cc99 (grün1)
+#1f7f5f (grün2)

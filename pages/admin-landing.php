@@ -3,11 +3,15 @@
 		<meta charset="UTF-8">
 		<title>Typr-Admin</title>
         <link href="../css/main.css" type="text/css" rel="stylesheet">
+        <link href="../css/admin.css" type="text/css" rel="stylesheet">
         <link href="../css/admin-landing.css" type="text/css" rel="stylesheet">
         <link href="../img/favicon.png" type="image/png" rel="icon">
 	</head>
 	
 	<body>
+        
+        <?php include ("../modules/admin-navbar.php"); ?>    
+        
         <div class="card">
             <form action="admin-landing.php" method="post">
                 <fieldset>
@@ -34,6 +38,7 @@
                 
             </form>
         </div>
+        
         
         <div class="card">
             <form action="admin-landing.php" method="post">

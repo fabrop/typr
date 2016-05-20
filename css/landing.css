@@ -171,7 +171,7 @@ body {
 
 @media only screen and (min-width: 1501px) {
     .article-text {
-        width: 70%;
+        width: calc(70% - 30px);
     }
 	.article-img {
 		width: 25%;
