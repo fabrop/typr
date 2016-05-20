@@ -121,12 +121,14 @@ nav ul li {
     display: inline;
     padding: 0px 5px;
 }
-
-#navbar a, a:visited, a:link, a:active {
+#navbar a {
+    transition: all 200ms ease;
+}
+#navbar a, a:visited, a:link {
     color: #484848;
 }
-#navbar a:hover {
-    color: #9f9f9f;
+#navbar a:hover, a:active {
+    color: #33cc99;
 }
 
 @media only screen and (max-width: 700px) { /*breakpoint nav vertical*/
