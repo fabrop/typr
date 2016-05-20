@@ -1,4 +1,0 @@
-- blog seite
-- portfolio seite
-- datenbank tabellen/sql
-- dynamisches generieren
