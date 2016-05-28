@@ -1,5 +1,5 @@
 <div id="navbar" class="card">
-    <h1 id="admin-title">Admin</h1>
+    <h1 id="admin-title">Admin</h1> <!-- php dyn -->
     <nav>
         <ul>
             <li><a href="../pages/admin-general.php">Allgemein</a></li>
