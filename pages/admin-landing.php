@@ -12,7 +12,7 @@
         
         <?php require '../modules/admin-navbar.php'; ?>    
       
-        <div class="card">
+        <div class="section card">
             <form action="admin-landing.php" method="post">
                 <fieldset>
                     <legend>Artikel 1</legend>

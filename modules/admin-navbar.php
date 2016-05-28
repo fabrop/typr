@@ -1,4 +1,4 @@
-<div id="navbar" class="card">
+<div id="navbar" class="section card">
     <h1 id="admin-title">Admin</h1> <!-- php dyn -->
     <nav>
         <ul>
