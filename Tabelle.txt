@@ -1,0 +1,16 @@
+
+Tbl1:
+id
+title	
+content
+date
+tags
+
+
+Tbl2:
+id
+title
+picture
+date
+alt_text
+description
