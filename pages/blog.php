@@ -36,7 +36,7 @@
             </nav>
         </div>
 
-        <div id="wrapper">
+        <div id="wrapper" class="clearfix">
             
             <div id="content">
                 <article class="card article">
@@ -63,9 +63,9 @@
                 <div class="card" id="sidebar-formcard">
                     <p>Anzahl Posts:</p>
                     <ul>
-                        <li><input type="checkbox">5</li>
-                        <li><input type="checkbox">10</li>
-                        <li><input type="checkbox">25</li>
+                        <li><input type="radio">5</li>
+                        <li><input type="radio">10</li>
+                        <li><input type="radio">25</li>
                     </ul>
                     <p>Sortierung:</p>
                     <ul>
