@@ -17,7 +17,7 @@
 					<ul class="main-nav">
 						<li><a href="../index.php">Home</a></li>
 						<li class="dropdown">
-							<a href="#">Categories</a>
+							<a>Kategorien</a>
 							<ul class="sub-nav">
 								<li><a href="?tag=tag1">Tag 1</a></li>
 								<li><a href="?tag=tag2">Tag 2</a></li>
@@ -25,14 +25,14 @@
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#">Admin</a>
+							<a>Admin</a>
 							<ul class="sub-nav">
-								<li><a href="admin-manage-blog.php">Manage</a></li>
-								<li><a href="admin-add-blog.php">Add Post</a></li>
+								<li><a href="admin-blog.php">Verwalten</a></li>
+								<li><a href="admin-add_blog.php">Post hinzufügen</a></li>
 							</ul>
 						</li>
-						<li><a href="gallery.php">Gallery</a></li>
-						<li><a href="contact.php">Contact</a></li>
+						<li><a href="gallery.php">Gallerie</a></li>
+						<li><a href="contact.php">Kontakt</a></li>
 					</ul>
 				</nav>
 			</div>

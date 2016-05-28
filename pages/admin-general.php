@@ -10,7 +10,7 @@
 	
 	<body>
         
-        <?php include ("../modules/admin-navbar.php"); ?>
+        <?php require '../modules/admin-navbar.php'; ?>
         
         <div class="card">
             <form action="admin-general.php" method="post">

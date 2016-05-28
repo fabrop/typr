@@ -1,13 +1,14 @@
 body {
-    background-color: #484848;
+    background-color: #ededed;
+    padding-top: 20px;
 }
 .card {
     background-color: white;
     display: block;
     width: 60%;
     padding: 20px 20px 5px 20px;
-    margin: 50px auto;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    margin: 20px auto;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
     overflow: auto;
 }
 
@@ -16,7 +17,7 @@ form {
 }
 fieldset {
     margin: 5px 0;
-    border: 1px solid #9f9f9f;
+    border: 1px solid #d1d1d1;
 }
 legend {
     font-weight: 300;
@@ -58,7 +59,7 @@ textarea {
     padding: 8px 50px;
     color: white;
     font-size: 1.2em;
-    transition: all 500ms ease;
+    transition: all 300ms ease;
     font-family: 'Roboto', sans-serif;
     width: 200px;
 }
@@ -71,7 +72,7 @@ textarea {
 #link {
     width: 400px;
     text-align: center;
-    margin: 0 auto 100px;
+    margin: 50px auto 100px;
     font-weight: 300;
     display: block;
     font-weight: 300;
@@ -81,29 +82,25 @@ textarea {
 #link img {
     height: 20px;
     width: auto;
-    opacity: 0.5;
+    opacity: 0.8;
     padding: 6px 6px 0 0;
 }
-#link a {
+#link p {
+    color: #484848;
+    margin: 0;
+    display: inline;
+}
+#link:hover p {
     color: #9f9f9f;
 }
-#link:hover a {
-    color: #d1d1d1;
-}
 #link:hover img {
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 /* admin-navbar */
 
 #navbar {
-    background-color: white;
-    display: block;
-    width: 60%;
     padding: 5px 20px 5px 20px;
-    margin: 50px auto;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
-    overflow: auto;
 }
 #admin-title {
     margin: 0;

@@ -1,4 +1,4 @@
-<div id="navbar">
+<div id="navbar" class="card">
     <h1 id="admin-title">Admin</h1>
     <nav>
         <ul>
