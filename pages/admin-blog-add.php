@@ -20,6 +20,7 @@
 			if(isset($_POST['title'])&&isset($_POST['text'])&&isset($_POST['tags'])){
 				$insert->insert_posts($_POST['title'],$_POST['text'],$_POST['tags']);
 			}
+        
 		?>
         <div class="section card">
             <form method="post">
