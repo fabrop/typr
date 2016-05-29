@@ -36,7 +36,7 @@
             </nav>
         </div>
 
-        <div id="wrapper" class="clearfix">
+        <div id="wrapper">
             
             <div id="content">
                 <article class="card article">
@@ -61,17 +61,19 @@
                     <h2 id="sidebar-tag">Alle Kategorien</h2>
                 </div>
                 <div class="card" id="sidebar-formcard">
-                    <p>Anzahl Posts:</p>
-                    <ul>
-                        <li><input type="radio">5</li>
-                        <li><input type="radio">10</li>
-                        <li><input type="radio">25</li>
-                    </ul>
-                    <p>Sortierung:</p>
-                    <ul>
-                        <li><input type=radio>Neueste zuerst</li>
-                        <li><input type=radio>&Auml;lteste zuerst</li>
-                    </ul>
+                    <form method="GET">
+                        <p>Anzahl Posts:</p>
+                        <ul>
+                            <li><input type="radio" name="number" onChange="this.form.submit();" value="5" id="number5" checked><label for="number5">5</label></li>
+                            <li><input type="radio" name="number" onChange="this.form.submit();" value="10" id="number10"><label for="number10">10</label></li>
+                            <li><input type="radio" name="number" onChange="this.form.submit();" value="15" id="number15"><label for="number15">15</label></li>
+                        </ul>
+                        <p>Sortierung:</p>
+                        <ul>
+                            <li><input type=radio name="sort" onChange="this.form.submit();" value="n" id="sort-new" checked><label for="sort-new">Neueste zuerst</label></li>
+                            <li><input type=radio name="sort" onChange="this.form.submit();" value="o" id="sort-old"><label for="sort-old">&Auml;lteste zuerst</label></li>
+                        </ul>
+                    </form>
                 </div>
             </div>
             
