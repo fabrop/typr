@@ -8,68 +8,6 @@ body {
 main {
     flex: 1;
 }
-#top {
-	width: 100%;
-	display: block;
-	background-color: #33cc99;
-	color: white;
-	box-shadow: 0px 7px 0px #1f7f5f;
-	height: 50px;
-	padding: 14px 20px 6px 20px;
-}
-#logo {
-	float: left;
-    height: 40px;
-    position: absolute;
-    top: 5px;
-}
-.main-nav {
-	float: right;
-	font-size: 16px;
-    margin: 0;
-    padding: 0;
-}
-.main-nav, .sub-nav {
-	list-style-type: none;
-    overflow: hidden;
-}
-.main-nav li {
-	float: left;
-}
-.main-nav li a, .main-nav li a:visited, .main-nav li a:link {
-	color: white;
-	padding: 5px 15px;
-}
-.main-nav li a:hover, .main-nav li a:active {
-	text-shadow: 1px 0px 0px white;
-}
-
-.sub-nav {
-    display: none;
-    position: absolute;
-	color: white;
-    margin: 0;
-    padding: 10px 0 0 0;
-}
-.sub-nav li {
-	display: block;
-	float: none;
-}
-.sub-nav li a:visited, .sub-nav li a:link, .sub-nav li a:hover, .sub-nav li a:active {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-.sub-nav li a:hover, .sub-nav li a:active {
-    text-shadow: 1px 0px 0px white;
-}
-.dropdown:hover .sub-nav {
-    display: block;
-	background-color: #33cc99;
-	box-shadow: 0px 7px 0px #1f7f5f;
-}
 
 #wrapper {
     width: 80%;
@@ -87,12 +25,18 @@ main {
     margin-left: 50px;
     float: right;
 }
-#sidebar-tag, .article-heading {
+.article-heading {
     margin-top: 0;
 }
 #sidebar hr {
     border-top: 1px solid #d1d1d1;
     border-bottom: none;
+}
+#sidebar a {
+    color: black;
+}
+#sidebar a:hover, #sidebar a:active {
+    color: #1f7f5f;
 }
 article {
     padding: 15px 30px 15px 30px;
@@ -117,24 +61,14 @@ article:hover {
     text-align: right;
     color: #9f9f9f;
 }
-
-#sidebar-tagcard {
-    background-color: #33cc99;
-    color: white;
-    padding: 10px 15px;
-}
-#sidebar-tag {
-    margin: 0;
-}
 #sidebar ul {
     list-style: none;
     padding: 0;
 }
 
-#sidebar-formcard {
+#sidebar {
     box-sizing: border-box;
     padding: 1px 15px 10px;
-    margin-top: 20px;
 }
 
 #pagination {

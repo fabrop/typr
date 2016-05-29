@@ -1,0 +1,35 @@
+#top {
+	width: 100%;
+	display: block;
+	background-color: #33cc99;
+	color: white;
+	box-shadow: 0px 7px 0px #1f7f5f;
+	height: 50px;
+	padding: 14px 20px 6px 20px;
+}
+#logo {
+	float: left;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+}
+.main-nav {
+	float: right;
+	font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+.main-nav {
+	list-style-type: none;
+    overflow: hidden;
+}
+.main-nav li {
+	float: left;
+}
+.main-nav li a, .main-nav li a:visited, .main-nav li a:link {
+	color: white;
+	padding: 5px 15px;
+}
+.main-nav li a:hover, .main-nav li a:active {
+    text-shadow: 0 0 2px white;
+}

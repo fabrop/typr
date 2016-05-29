@@ -5,13 +5,14 @@
 		<title>Blog</title>
         <link href="../css/main.css" type="text/css" rel="stylesheet">
         <link href="../css/blog.css" type="text/css" rel="stylesheet">
+        <link href="../css/navbar.css" type="text/css" rel="stylesheet">
         <link href="../css/blog-post.css" type="text/css" rel="stylesheet">
         <link href="../img/favicon.png" type="image/png" rel="icon">
 	</head>
 	
 	<body>
         
-        <?php require '../modules/blog-navbar.php' ?>
+        <?php require '../modules/navbar.php' ?>
 
         <div id="wrapper">
 
@@ -29,17 +30,13 @@
                 </article>
             </div>
 
-            <div id="sidebar">
-                <div class="card" id="sidebar-tagcard">
-                    <h2 id="sidebar-tag">Kategorien</h2>
-                </div>
-                <div class="card" id="sidebar-formcard">
-                    <ul>
-                        <li>Tag 1</li>
-                        <li>Tag 2</li>
-                        <li>Tag 3</li>
-                    </ul>
-                </div>
+            <div id="sidebar" class="card">
+                <h2 id="sidebar-tag">Kategorien</h2>
+                <ul>
+                    <li>Tag 1</li>
+                    <li>Tag 2</li>
+                    <li>Tag 3</li>
+                </ul>
             </div>
 
         </div>

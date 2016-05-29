@@ -5,12 +5,13 @@
 		<title>Blog</title>
         <link href="../css/main.css" type="text/css" rel="stylesheet">
         <link href="../css/blog.css" type="text/css" rel="stylesheet">
+        <link href="../css/navbar.css" type="text/css" rel="stylesheet">
         <link href="../img/favicon.png" type="image/png" rel="icon">
 	</head>
 	
 	<body>
         <main>
-            <?php require '../modules/blog-navbar.php' ?>
+            <?php require '../modules/navbar.php' ?>
 
             <div id="wrapper">
 
@@ -38,26 +39,34 @@
                     </article>
                 </div>
 
-                <div id="sidebar">
-                    <div class="card" id="sidebar-tagcard">
-                        <h2 id="sidebar-tag">Alle Kategorien</h2>
-                    </div>
-                    <div class="card" id="sidebar-formcard">
-                        <form method="GET">
-                            <p>Anzahl Posts:</p>
-                            <ul>
-                                <li><input type="radio" name="number" onChange="this.form.submit();" value="5" id="number5" checked><label for="number5">5</label></li>
-                                <li><input type="radio" name="number" onChange="this.form.submit();" value="10" id="number10"><label for="number10">10</label></li>
-                                <li><input type="radio" name="number" onChange="this.form.submit();" value="15" id="number15"><label for="number15">15</label></li>
-                            </ul>
-                            <hr>
-                            <p>Sortierung:</p>
-                            <ul>
-                                <li><input type=radio name="sort" onChange="this.form.submit();" value="n" id="sort-new" checked><label for="sort-new">Neueste zuerst</label></li>
-                                <li><input type=radio name="sort" onChange="this.form.submit();" value="o" id="sort-old"><label for="sort-old">&Auml;lteste zuerst</label></li>
-                            </ul>
-                        </form>
-                    </div>
+                <div id="sidebar" class="card"> 
+                    <form method="GET">
+                        <p>Kategorien:</p>
+                        <ul>
+                            <li><input type="checkbox" name="tag" onChange="this.form.submit();" value="1" id="tag1" checked><label for="tag1">Tag 1</label></li>
+                            <li><input type="checkbox" name="tag" onChange="this.form.submit();" value="2" id="tag2" checked><label for="tag2">Tag 2</label></li>
+                            <li><input type="checkbox" name="tag" onChange="this.form.submit();" value="3" id="tag3" checked><label for="tag3">Tag 3</label></li>
+                        </ul>
+                        <hr>
+                        <p>Anzahl Posts:</p>
+                        <ul>
+                            <li><input type="radio" name="number" onChange="this.form.submit();" value="5" id="number5" checked><label for="number5">5</label></li>
+                            <li><input type="radio" name="number" onChange="this.form.submit();" value="10" id="number10"><label for="number10">10</label></li>
+                            <li><input type="radio" name="number" onChange="this.form.submit();" value="15" id="number15"><label for="number15">15</label></li>
+                        </ul>
+                        <hr>
+                        <p>Sortierung:</p>
+                        <ul>
+                            <li><input type=radio name="sort" onChange="this.form.submit();" value="n" id="sort-new" checked><label for="sort-new">Neueste zuerst</label></li>
+                            <li><input type=radio name="sort" onChange="this.form.submit();" value="o" id="sort-old"><label for="sort-old">&Auml;lteste zuerst</label></li>
+                        </ul>
+                        <hr>
+                        <p>
+                            <a href="admin-blog.php">Posts verwalten...</a>
+                            <br>
+                            <a href="admin-blog-add.php">Post schreiben...</a>
+                        </p>
+                    </form>
                 </div>
 
             </div>
