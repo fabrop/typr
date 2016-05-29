@@ -11,7 +11,9 @@
 	
 	<body>
         <main>
-            <?php require '../modules/navbar.php' ?>
+            <?php 
+                require_once '../modules/navbar.php';
+            ?>
 
             <div id="wrapper">
 

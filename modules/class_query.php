@@ -25,6 +25,20 @@
 						
 				return $db->select($query);
 			}
+<<<<<<< HEAD
+			
+			public function get_one_post($nbr){
+				global $db;
+				$query = "
+							SELECT id,title,content,date 
+							FROM posts
+							WHERE id = $nbr
+						";
+						
+				return $db->select($query);
+			}
+=======
+>>>>>>> origin/master
 		}
 	}
 	$query = new Query;

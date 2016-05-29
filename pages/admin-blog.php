@@ -1,15 +1,15 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Typr-Admin</title>
+ <head>
+  <meta charset="UTF-8">
+  <title>Typr-Admin</title>
         <link href="../css/main.css" type="text/css" rel="stylesheet">
         <link href="../css/admin.css" type="text/css" rel="stylesheet">
         <link href="../css/admin-blog.css" type="text/css" rel="stylesheet">
         <link href="../img/favicon.png" type="image/png" rel="icon">
-	</head>
-	
-	<body>
+ </head>
+ 
+ <body>
         
         <?php 
             require_once '../modules/admin-navbar.php';  
@@ -63,7 +63,7 @@
                         } 
                         echo "</table>";
                     ?>
-                    
+
                 </table>
             </form>
         </div>
