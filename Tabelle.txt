@@ -13,3 +13,14 @@ picture
 date
 alt_text
 description
+
+Kontakt:
+Name
+Adresse
+Telefon
+Email
+
+Home:
+Picture
+Caption
+Text
