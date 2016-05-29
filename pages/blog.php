@@ -14,7 +14,9 @@
             <?php require '../modules/navbar.php' ?>
 
             <div id="wrapper">
-
+				<?php
+					
+				?>
                 <div id="content">
                     <article class="card article">
                         <a href="blog-post.php?id=1">

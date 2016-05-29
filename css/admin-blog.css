@@ -21,10 +21,10 @@ th, td {
     padding: 7px 0;
 }
 td:nth-child(2), th:nth-child(2) {
-    width: 75px;
+    width: 80px;
 }
 td:nth-child(3), th:nth-child(3) {
-    width: 110px;
+    width: 100px;
 }
 td:nth-child(4), th:nth-child(4) {
     width: 100px;
