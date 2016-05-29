@@ -8,3 +8,42 @@
 #addpost a:hover {
     color: #33cc99;
 }
+table {
+    width: 100%;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+}
+th {
+    text-align: left;
+}
+th, td {
+    border-bottom: 1px solid #d1d1d1;
+    padding: 7px 0;
+}
+td:nth-child(2), th:nth-child(2) {
+    width: 75px;
+}
+td:nth-child(3), th:nth-child(3) {
+    width: 110px;
+}
+td:nth-child(4), th:nth-child(4) {
+    width: 100px;
+}
+td:nth-child(5), th:nth-child(5) {
+    width: 30px;
+}
+td:nth-child(6), th:nth-child(6) {
+    width: 27px;
+    position: relative;
+}
+td:nth-child(6) input {
+    opacity: 0;
+}
+td:nth-child(6) img {
+    position: absolute;
+    left: 0px;
+    top: 11px;
+}
+img {
+    height: 1em;
+}

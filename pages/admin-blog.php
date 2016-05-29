@@ -17,8 +17,41 @@
         </div>
         
         <div class="section card">
-            <form action="admin-blog.php" method="post">
-                
+            <form action="" method="POST">
+                <table>
+                    <tr>
+                        <th>Titel</th>
+                        <th>Uhrzeit</th>
+                        <th>Datum</th>
+                        <th>L&auml;nge</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum dolor</td>
+                        <td>21:09</td>
+                        <td>29.05.2016</td>
+                        <td>432 Wörter</td>
+                        <td><a href="#"><img alt="edit" src="../img/edit.png"></a></td>
+                        <td><input type="submit" name="deletePost" value="" /><img alt="edit" src="../img/delete.png"></td>
+                    </tr>
+                    <tr>
+                        <td>Temporibus autem quibusdam</td>
+                        <td>23:11</td>
+                        <td>17.03.2016</td>
+                        <td>127 Wörter</td>
+                        <td><a href="#"><img alt="edit" src="../img/edit.png"></a></td>
+                        <td><input type="submit" name="deletePost" value="" /><img alt="edit" src="../img/delete.png"></td>
+                    </tr>
+                    <tr>
+                        <td>Nihil impedit quo minus id quod</td>
+                        <td>11:08</td>
+                        <td>05.02.2015</td>
+                        <td>288 Wörter</td>
+                        <td><a href="#"><img alt="edit" src="../img/edit.png"></a></td>
+                        <td><input type="submit" name="deletePost" value="" /><img alt="edit" src="../img/delete.png"></td>
+                    </tr>
+                </table>
             </form>
         </div>
         
