@@ -4,21 +4,25 @@
 		<title>Typr-Admin</title>
         <link href="../css/main.css" type="text/css" rel="stylesheet">
         <link href="../css/admin.css" type="text/css" rel="stylesheet">
-        <link href="../css/admin-blog.css" type="text/css" rel="stylesheet">
+        <link href="../css/admin-blog-add.css" type="text/css" rel="stylesheet">
         <link href="../img/favicon.png" type="image/png" rel="icon">
 	</head>
 	
 	<body>
         
-        <?php require '../modules/admin-navbar.php'; ?>    
-      
-        <div class="section card" id="addpost">
-            <a href="admin-blog-add.php">Post hinzufügen...</a>
+        <?php require '../modules/admin-navbar.php'; ?> 
+        
+        <div class="section card" id="allposts">
+            <a href="admin-blog.php">Posts verwalten...</a>
         </div>
         
         <div class="section card">
-            <form action="admin-blog.php" method="post">
+            <form action="admin-blog-add.php" method="post">
+                <label for="title">Titel: </label><input type="text" id="title">
                 
+                <textarea id="text"></textarea>
+                
+                <label for="tags">Kategorien: </label><input type="text" id="tags">
             </form>
         </div>
         

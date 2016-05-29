@@ -87,9 +87,12 @@ main {
     margin-left: 50px;
     float: right;
 }
-
 #sidebar-tag, .article-heading {
     margin-top: 0;
+}
+#sidebar hr {
+    border-top: 1px solid #d1d1d1;
+    border-bottom: none;
 }
 article {
     padding: 15px 30px 15px 30px;

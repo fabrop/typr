@@ -10,32 +10,7 @@
 	
 	<body>
         <main>
-            <div id="top" class="clearfix">
-                <img id="logo" alt="blog-logo" src="../img/blog-logo.png">
-
-                <nav>
-                    <ul class="main-nav">
-                        <li><a href="../index.php">Home</a></li>
-                        <li class="dropdown">
-                            <a>Kategorien</a>
-                            <ul class="sub-nav">
-                                <li><a href="?tag=tag1">Tag 1</a></li>
-                                <li><a href="?tag=tag2">Tag 2</a></li>
-                                <li><a href="?tag=tag3">Tag 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a>Admin</a>
-                            <ul class="sub-nav">
-                                <li><a href="admin-blog.php">Verwalten</a></li>
-                                <li><a href="admin-add_blog.php">Post hinzufügen</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="gallery.php">Gallerie</a></li>
-                        <li><a href="contact.php">Kontakt</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <?php require '../modules/blog-navbar.php' ?>
 
             <div id="wrapper">
 
@@ -75,6 +50,7 @@
                                 <li><input type="radio" name="number" onChange="this.form.submit();" value="10" id="number10"><label for="number10">10</label></li>
                                 <li><input type="radio" name="number" onChange="this.form.submit();" value="15" id="number15"><label for="number15">15</label></li>
                             </ul>
+                            <hr>
                             <p>Sortierung:</p>
                             <ul>
                                 <li><input type=radio name="sort" onChange="this.form.submit();" value="n" id="sort-new" checked><label for="sort-new">Neueste zuerst</label></li>
