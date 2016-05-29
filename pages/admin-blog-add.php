@@ -10,7 +10,8 @@
 	
 	<body>
         
-        <?php require '../modules/admin-navbar.php'; ?> 
+        <?php require '../modules/admin-navbar.php'; ?>
+        <?php require_once '../modules/class-insert.php' ?>
         
         <div class="section card" id="allposts">
             <a href="admin-blog.php">Posts verwalten...</a>
@@ -23,6 +24,8 @@
                 <textarea id="text"></textarea>
                 
                 <label for="tags">Kategorien: </label><input type="text" id="tags">
+                
+                <input type="submit" value="Posten" id="save">
             </form>
         </div>
         
