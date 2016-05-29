@@ -13,17 +13,18 @@
         
         <?php 
             require_once '../modules/admin-navbar.php'; 
-            require_once '../modules/class-insert.php';
+            require_once '../modules/class-insert.php'; 
         ?>
         
         <div class="section card" id="allposts">
             <a href="admin-blog.php">Posts verwalten...</a>
         </div>
         <?php
-			if(isset($_POST['title'])&&isset($_POST['text'])&&isset($_POST['tags'])){
+			/*
+            if(isset($_POST['title'])&&isset($_POST['text'])&&isset($_POST['tags'])){
 				$insert->insert_posts($_POST['title'],$_POST['text'],$_POST['tags']);
 			}
-        
+            */
 		?>
         <div class="section card">
             <form method="post">

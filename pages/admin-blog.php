@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -10,8 +11,10 @@
 	
 	<body>
         
-        <?php require '../modules/admin-navbar.php'; ?>  
-        <?php require_once '../modules/class-database.php'; ?> 
+        <?php 
+            require_once '../modules/admin-navbar.php';  
+            require_once '../modules/class-database.php'; 
+        ?> 
       
         <div class="section card" id="addpost">
             <a href="admin-blog-add.php">Post hinzufügen...</a>
@@ -60,7 +63,7 @@
                         } 
                         echo "</table>";
                     ?>
-        
+                    
                 </table>
             </form>
         </div>

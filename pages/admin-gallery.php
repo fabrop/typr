@@ -10,7 +10,9 @@
 	
 	<body>
         
-        <?php require '../modules/admin-navbar.php'; ?>    
+        <?php 
+            require_once '../modules/admin-navbar.php'; 
+        ?>    
       
         <div class="section card">
             <form action="admin-gallery.php" method="post">

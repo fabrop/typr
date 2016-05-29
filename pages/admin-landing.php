@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -10,7 +11,9 @@
 	
 	<body>
         
-        <?php require '../modules/admin-navbar.php'; ?>    
+        <?php 
+            require_once '../modules/admin-navbar.php'; 
+        ?>    
       
         <div class="section card">
             <form action="admin-landing.php" method="post">
