@@ -16,6 +16,19 @@
             <a href="admin-blog-add.php">Post hinzufügen...</a>
         </div>
         
+        <?php
+            public function get_time($datetime){
+                time = substr($datetime, 11, 8);
+                return time;
+            }
+            public function get_date($datetime){
+                date = substr($datetime, 0, 9);
+                return date;
+            }
+            
+            
+        ?>
+        
         <div class="section card">
             <form action="" method="POST">
                 <table>
