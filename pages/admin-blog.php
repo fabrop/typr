@@ -17,16 +17,32 @@
         </div>
         
         <?php
-            public function get_time($datetime){
-                time = substr($datetime, 11, 8);
-                return time;
+            function get_time($datetime){
+                $time = substr($datetime, 11, 8);
+                return $time;
             }
-            public function get_date($datetime){
-                date = substr($datetime, 0, 9);
-                return date;
+            function get_date($datetime){
+                $date = substr($datetime, 0, 9);
+                return $date;
             }
             
-            
+            require_once('../modules/class_query.php');
+			$everything = $query->every_post();
+			echo "<table>";
+			
+			while ($row = mysqli_fetch_assoc($everything)){
+				echo "<tr>\n";
+				echo "<td>".$row['title']."</td>";
+				echo "<td>".get_time($row['date'])."</td>";
+				echo "<td>".get_date($row['date'])."</td>";
+				echo "<td>".str_word_count($row['content'])."</td>";
+				/*foreach ($row as $v) {
+					echo "<td>".$v."</td>";
+				}
+				*/
+				echo "</tr>\n";
+			} 
+			echo "</table>";
         ?>
         
         <div class="section card">
