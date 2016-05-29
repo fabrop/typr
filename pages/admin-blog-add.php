@@ -16,14 +16,18 @@
         <div class="section card" id="allposts">
             <a href="admin-blog.php">Posts verwalten...</a>
         </div>
-        
+        <?php
+			if(isset($_POST['title'])&&isset($_POST['text'])&&isset($_POST['tags'])){
+				$insert->insert_posts($_POST['title'],$_POST['text'],$_POST['tags']);
+			}
+		?>
         <div class="section card">
-            <form action="admin-blog-add.php" method="post">
-                <label for="title">Titel: </label><input type="text" id="title">
+            <form method="post">
+                <label for="title">Titel: </label><input type="text" id="title" name="title">
                 
-                <textarea id="text"></textarea>
+                <textarea id="text" name="text"></textarea>
                 
-                <label for="tags">Kategorien: </label><input type="text" id="tags">
+                <label for="tags">Kategorien: </label><input type="text" id="tags" name="tags">
                 
                 <input type="submit" value="Posten" id="save">
             </form>
