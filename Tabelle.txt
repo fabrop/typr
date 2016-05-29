@@ -14,13 +14,14 @@ date
 alt_text
 description
 
-Kontakt:
-Name
-Adresse
-Telefon
-Email
+Contact:
+name
+adress
+phone
+email
 
 Home:
-Picture
-Caption
-Text
+id
+picture
+caption
+text
