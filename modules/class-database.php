@@ -11,21 +11,23 @@
 				$this->connect = $mysqli;
 			}
 			
-			public function insert($query){
-				//$query = "
-				//			INSERT INTO Posts (title,content,tags)
-				//			VALUES ($title,$content,$tags)
-				//		";
+			public function insert($query) {
 				$result = $this->connect->query($query);
 				
 				return $result;
 			}
 			
-			public function select($query){
+			public function select($query) {
 				$result = $this->connect->query($query);
 				
 				return $result;
 			}
+            
+            public function delete($query) {
+                $result = $this->connect->query($query);
+				
+				return $result;
+            }
 		}
 	}
 	

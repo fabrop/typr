@@ -10,7 +10,8 @@
 	
 	<body>
         
-        <?php require '../modules/admin-navbar.php'; ?>    
+        <?php require '../modules/admin-navbar.php'; ?>  
+        <?php require_once '../modules/class-database.php'; ?> 
       
         <div class="section card" id="addpost">
             <a href="admin-blog-add.php">Post hinzufügen...</a>
@@ -37,18 +38,24 @@
                             $date = substr($datetime, 0, 10);
                             return $date;
                         }
+                    
+                        if(isset($_POST['deletePost'])) {
+                            $delete = $_POST['deletePost'];
+                            $query = "DELETE FROM Posts WHERE id = '$delete'"; 
+                            $db->delete($query);
+                        }
 
                         require_once('../modules/class_query.php');
                         $everything = $query->every_post();
 
                         while ($row = mysqli_fetch_assoc($everything)){
                             echo "<tr>\n";
-                                echo "<td>".$row['title']."</td>";
+                                echo "<td><a href=\"blog-post.php?id=".$row['id']."\">".$row['title']."</a></td>";
                                 echo "<td>".get_time($row['date'])."</td>";
                                 echo "<td>".get_date($row['date'])."</td>";
                                 echo "<td>".str_word_count($row['content'])." Wörter</td>";
-                                echo "<td><a href=\"blog-post.php?id=".$row['id']."\"><img alt=\"edit\" src=\"../img/edit.png\"></a></td>";
-                                echo "<td><img alt=\"edit\" src=\"../img/delete.png\"><input type=\"submit\" name=\"deletePost\" value=\"\" /></td>";
+                                echo "<td><a href=\"admin-blog-post.php?id=".$row['id']."\"><img alt=\"edit\" src=\"../img/edit.png\"></a></td>";
+                                echo "<td><img alt=\"edit\" src=\"../img/delete.png\"><input type=\"submit\" name=\"deletePost\" value=\"".$row['id']."\" /></td>";
                             echo "</tr>\n";
                         } 
                         echo "</table>";
