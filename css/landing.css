@@ -78,11 +78,11 @@ body {
     text-align: center;
 }
 .card-link {
-    padding: 8px 18px;
+    padding: 8px 18px 8px 18px;
     margin: 10px 10px 10px 20px;
     border: 1px solid #484848;
     display: inline-block;
-    width: 100px;
+    width: 140px;
     color: #484848;
     transition-property: border;
     transition-duration: 300ms;
@@ -182,6 +182,10 @@ body {
 @media only screen and (max-width: 1300px) { /* ein/zwei artikel break */
 	.article {
         width: 100%;
+    }
+    
+    .card-link {
+        width: 100px;
     }
 }
 
