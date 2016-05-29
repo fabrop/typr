@@ -1,8 +1,16 @@
 #allposts {
     padding: 15px 20px;
 }
+#allposts a {
+    font-size: 1.2em;
+    transition: all 200ms ease;
+}
+#allposts a:hover {
+    color: #33cc99;
+}
 textarea {
     margin: 20px 0;
+    height: 500px;
 }
 #tags {
     margin: 0 0 10px;
