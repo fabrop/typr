@@ -25,6 +25,7 @@
 						
 				return $db->select($query);
 			}
+<<<<<<< HEAD
 			
 			public function get_one_post($nbr){
 				global $db;
@@ -36,6 +37,8 @@
 						
 				return $db->select($query);
 			}
+=======
+>>>>>>> origin/master
 		}
 	}
 	$query = new Query;

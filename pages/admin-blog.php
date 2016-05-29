@@ -60,7 +60,11 @@
                         } 
                         echo "</table>";
                     ?>
+<<<<<<< HEAD
                     
+=======
+        
+>>>>>>> origin/master
                 </table>
             </form>
         </div>
