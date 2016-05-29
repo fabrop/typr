@@ -36,9 +36,9 @@
             </form>
         </div>
         
-        <a id="link" href="blog.php">
+        <a id="link" href="../index.php">
             <img src="../img/back-arrow.png">
-            <p>Zur&uuml;ck zum Blog</p>
+            <p>Zur&uuml;ck zur Startseite</p>
         </a>
     </body>
 </html>

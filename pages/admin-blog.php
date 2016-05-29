@@ -33,7 +33,7 @@
                         <td>29.05.2016</td>
                         <td>432 Wörter</td>
                         <td><a href="#"><img alt="edit" src="../img/edit.png"></a></td>
-                        <td><input type="submit" name="deletePost" value="" /><img alt="edit" src="../img/delete.png"></td>
+                        <td><img alt="edit" src="../img/delete.png"><input type="submit" name="deletePost" value="" /></td>
                     </tr>
                     <tr>
                         <td>Temporibus autem quibusdam</td>
@@ -41,7 +41,7 @@
                         <td>17.03.2016</td>
                         <td>127 Wörter</td>
                         <td><a href="#"><img alt="edit" src="../img/edit.png"></a></td>
-                        <td><input type="submit" name="deletePost" value="" /><img alt="edit" src="../img/delete.png"></td>
+                        <td><img alt="edit" src="../img/delete.png"><input type="submit" name="deletePost" value="" /></td>
                     </tr>
                     <tr>
                         <td>Nihil impedit quo minus id quod</td>
@@ -49,7 +49,7 @@
                         <td>05.02.2015</td>
                         <td>288 Wörter</td>
                         <td><a href="#"><img alt="edit" src="../img/edit.png"></a></td>
-                        <td><input type="submit" name="deletePost" value="" /><img alt="edit" src="../img/delete.png"></td>
+                        <td><img alt="edit" src="../img/delete.png"><input type="submit" name="deletePost" value="" /></td>
                     </tr>
                 </table>
             </form>

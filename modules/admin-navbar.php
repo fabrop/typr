@@ -6,6 +6,7 @@
             <li><a href="../pages/admin-landing.php">Startseite</a></li>
             <li><a href="../pages/admin-blog.php">Blog</a></li>
             <li><a href="../pages/admin-gallery.php">Gallerie</a></li>
+            <li><a href="../pages/admin-contact.php">Kontakt</a></li>
         </ul>
     </nav>
 </div>
