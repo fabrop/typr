@@ -121,22 +121,24 @@ article img:hover{
     height: 150px;
 }
 
-.modal-content, #caption {    
-    animation-name: zoom;
+.modal-content {    
+    animation-name: scale;
     animation-duration: 0.2s;
 }
-
-@-webkit-keyframes zoom {
+@-webkit-keyframes scale {
     from {transform:scale(0)} 
     to {transform:scale(1)}
 }
-
-@keyframes zoom {
-    from {transform:scale(0.1)} 
-    to {transform:scale(1)}
+#caption {    
+    animation-name: appear;
+    animation-duration: 0.5s;
+}
+@keyframes appear {
+    from {opacity: 0;} 
+    to {opacity: 1;}
 }
 
-.close {
+.x {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -145,8 +147,7 @@ article img:hover{
     font-weight: bold;
     transition: 0.3s;
 }
-
-.close:hover {
+.x:hover {
     color: white;
     text-decoration: none;
     cursor: pointer;

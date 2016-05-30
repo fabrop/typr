@@ -39,7 +39,7 @@
                 </div>
                 
                 <div id="imgModal" class="modal">
-                      <span class="close">×</span>
+                      <div class="x">×</div>
                       <img class="modal-content" id="image">
                       <div id="caption"></div>
                 </div>
@@ -83,16 +83,16 @@
         </nav>
         <script>
             var modal = document.getElementById('imgModal');
+            var div = document.getElementsByClassName("x")[0];
 
-            var span = document.getElementsByClassName("close")[0];
-
-            span.onclick = function() { 
+            div.onclick = function() { 
                 modal.style.display = "none";
             }
 
             var images = document.getElementsByTagName('img');
             var modalImg = document.getElementById("image");
             var captionText = document.getElementById("caption");
+            
             var i;
             for (i = 0; i < images.length; i++) {
                images[i].onclick = function(){
