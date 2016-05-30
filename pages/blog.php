@@ -107,12 +107,19 @@
 				$number = $number_arr['count_posts'];
 				//echo $number;
 				$cnt_pages = ceil($number / $nbr_posts);
+				echo '<input type="hidden" name="number" value='.$nbr_posts.'>';
+				echo '<input type="hidden" name="sort" value='.$sort.'>';
+				if(($cur_page - 2) > 1){
+					echo '<li><input type="submit" name="page" value=1 /></li>';
+				}
 				for($i = ($cur_page - 2);$i <= ($cur_page + 2);$i++){
 					if(($i >= 1)&&($i <= $cnt_pages)){
 						echo '<li><input type="submit" name="page" value='.$i.' /></li>';
 					}
 				}
-				
+				if(($cur_page + 2) < $cnt_pages){
+					echo '<li><input type="submit" name="page" value='.$cnt_pages.' /></li>';
+				}
 			?>
 			</form>
                 <li><a href="#">&lt&lt<span> Vorherige Seite</span></a></li>
