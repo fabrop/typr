@@ -11,5 +11,10 @@
 	while($row = mysqli_fetch_assoc($everything)){
 		printf ("%s (%s)\n", $row["title"], $row["content"]);
 	}
+	
 ?>
+<form action="upTest.php" method="post" enctype="multipart/form-data">
+<input type="file" name="datei"><br>
+<input type="submit" value="Hochladen">
+</form>
 </html>
