@@ -85,10 +85,6 @@
                             $query = "SELECT DISTINCT tags FROM Posts";
                             $tags = $db->action($query);
                     
-                            if(isset($_GET['tag'])){
-                                print_r($_GET['tag']);
-                            }
-                            
                             for ($i = 0; $tag = mysqli_fetch_assoc($tags); $i++){
                                 echo 
                                     '<li>
@@ -99,9 +95,10 @@
                                             value="'.$tag['tags'].'" 
                                             id="tag['.$tag['tags'].']"
                                             ';
-                                            echo $i;
-                                            if(isset($_GET['tag[$i]'])){
-                                                echo 'checked';
+                                            if(isset($_GET['tag'])) {
+                                                if (in_array($tag['tags'], $_GET['tag'], FALSE)) {
+                                                    echo 'checked';
+                                                }
                                             }
                                             
                                 echo '
@@ -121,13 +118,43 @@
                             <hr>
                             <p>Anzahl Posts:</p>
                             <ul>
-                            ';
-                            /* 
-                            <li><input type="radio" name="number" onChange="this.form.submit();" value="6" id="number6" checked><label for="number6">6</label></li>
-                            <li><input type="radio" name="number" onChange="this.form.submit();" value="12" id="number12"><label for="number12">12</label></li>
-                            <li><input type="radio" name="number" onChange="this.form.submit();" value="20" id="number20"><label for="number20">20</label></li>
-                            */
-                            echo '
+                            
+                            <li>
+                                <input type="radio" name="number" onChange="this.form.submit();" value="6" id="number6"
+                                ';
+                                if (isset($_GET['number'])) { 
+                                    if ($_GET['number']==6) {
+                                        echo 'checked';
+                                    }
+                                } 
+                                echo '
+                                >
+                                <label for="number6">6</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="number" onChange="this.form.submit();" value="12" id="number12"
+                                ';
+                                if (isset($_GET['number'])) { 
+                                    if ($_GET['number']==12) {
+                                        echo 'checked';
+                                    }
+                                }
+                                echo '
+                                >
+                                <label for="number12">12</label></li>
+                            <li>
+                                <input type="radio" name="number" onChange="this.form.submit();" value="20" id="number20"
+                                ';
+                                if (isset($_GET['number'])) { 
+                                    if ($_GET['number']==20) {
+                                        echo 'checked';
+                                    }
+                                }
+                                echo '
+                                >
+                                <label for="number20">20</label>
+                                </li>
+                            
                             </ul>
                             <hr>
                             <p>Sortierung:</p>
@@ -161,6 +188,7 @@
 				
 				echo '<input type="hidden" name="number" value='.$nbr_posts.'>';
 				echo '<input type="hidden" name="sort" value='.$sort.'>';
+                echo '<input type="hidden" name="tag[]" value='.$tag.'>';
 				if(($cur_page - 2) > 1){
 					echo '<li><input type="submit" name="first" value="ersteSeite" /></li>';
 				}
