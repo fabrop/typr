@@ -47,6 +47,9 @@ td:nth-child(6) img {
 img {
     height: 1em;
 }
+img:hover {
+    cursor: pointer;
+}
 table a:hover {
     color: #33cc99;
 }

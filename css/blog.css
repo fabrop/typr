@@ -85,18 +85,21 @@ article:hover {
     display: inline;
     margin: 0 7px;
 }
-#pagination a {
+#pagination input {
     color: white;
-    padding: 5px 12px;
     background-color: #1f7f5f;
-    border: 2px solid rgba(0,0,0,0.3);
-    transition: all 300ms ease;
+    border: 2px solid rgba(0,0,0,0.4);
+    padding: 7px 12px;
+    transition: all 200ms ease;
+    cursor: pointer;
 }
-#pagination a:hover, #pagination a:active {
+#pagination input:focus, #pagination input:hover {
+    outline: none;
     background-color: white;
     color: #1f7f5f;
-    border: 2px solid #1f7f5f
+    border-color: #1f7f5f;
 }
+
 
 @media only screen and (max-width: 1400px) {
     article {
