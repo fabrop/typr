@@ -18,12 +18,30 @@
             <div id="wrapper" class="clearfix">
 
                 <div id="content">
-                    <article class="card article">
+                    <article class="card">
                         <div class="img">
-                            <img src="" alt="" >
+                            <img src="../gallery/1.png" alt="1.png" >
                             <div class="desc">Lorem Ipsum dolor sit amet.</div>
                         </div>
                     </article>
+                    <article class="card">
+                        <div class="img">
+                            <img src="../gallery/2.png" alt="2.png" >
+                            <div class="desc">Lorem Ipsum dolor sit amet.</div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="img">
+                            <img src="../gallery/3.png" alt="3.png" >
+                            <div class="desc">Lorem Ipsum dolor sit amet.</div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div id="imgModal" class="modal">
+                      <span class="close">×</span>
+                      <img class="modal-content" id="image">
+                      <div id="caption"></div>
                 </div>
 
                 <div id="sidebar" class="card"> 
@@ -64,21 +82,16 @@
             </ul>
         </nav>
         <script>
-            // Get the modal
-            var modal = document.getElementById('myModal');
+            var modal = document.getElementById('imgModal');
 
-            // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
 
-            // When the user clicks on <span> (x), close the modal
             span.onclick = function() { 
                 modal.style.display = "none";
             }
 
-            // Get all images and insert the clicked image inside the modal
-            // Get the content of the image description and insert it inside the modal image caption
             var images = document.getElementsByTagName('img');
-            var modalImg = document.getElementById("img01");
+            var modalImg = document.getElementById("image");
             var captionText = document.getElementById("caption");
             var i;
             for (i = 0; i < images.length; i++) {
