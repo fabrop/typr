@@ -15,7 +15,7 @@
 			
 			public function get_posts($nbr,$page,$sort){
 				global $db;
-				$start = ($nbr * ($page - 1)) + 1;
+				$start = ($nbr * ($page - 1));
 				$query = "
 							SELECT * 
 							FROM posts
