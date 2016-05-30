@@ -57,6 +57,16 @@
 				
 				return $db->action($query);
 			}
+			
+			public function get_home(){
+				global $db;
+				$query = "
+							SELECT id,caption,text
+							FROM home
+						";
+				
+				return $db->action($query);
+			}
 		}
 	}
 	$query = new Query;

@@ -29,18 +29,24 @@
 					$raw_numbr = $db->action($query);
 					$numbr = mysqli_fetch_assoc($raw_numbr);
 					//echo $numbr['article_numb'];
+					$query = "
+							SELECT id,caption,text
+							FROM home
+						";
+					$result = $db->action($query);
 					for($i = 1; $i <= $numbr['article_numb'];$i++){
+						$content = mysqli_fetch_assoc($result);
 						echo '
 							<fieldset>
 							<legend>Artikel '.$i.'</legend>
 								<div class="input">
 									<label for="title'.$i.'">&Uuml;berschrift: </label>
-									<input type="text" name="title'.$i.'" value="Lorem ipsum dolor" id="title'.$i.'" class="title">
+									<input type="text" name="title'.$i.'" value="'.$content['caption'].'" id="title'.$i.'" class="title">
 								</div>
 						
 								<div class="input">
 									<label for="txt'.$i.'">Text: </label>
-									<textarea name="txt1" id="txt'.$i.'" class="txt"></textarea>
+									<textarea name="txt'.$i.'" id="txt'.$i.'" class="txt">'.$content['text'].'</textarea>
 								</div>
 							</fieldset>
 						';
