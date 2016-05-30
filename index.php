@@ -18,15 +18,26 @@
                     </div>
                 </div>
             </div>
-            
-            <div id="card-txt">
-                <h1 id="card-name">Max Mustermann</h1>
-                <h2 id="card-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</h2>
-                <div id="card-links">    
-                    <a class="card-link" href="./pages/blog.php">Blog</a>
-                    <a class="card-link" href="./pages/gallery.php">Gallerie</a>
-                </div>
-            </div>
+            <?php
+				require_once '/modules/class-database.php';
+				$query = "
+						SELECT id,name,description
+						FROM Contact
+						WHERE id = 1
+						";
+				$raw_data = $db->action($query);
+				$contact_data = mysqli_fetch_assoc($raw_data);
+				echo '
+				<div id="card-txt">
+					<h1 id="card-name">'.$contact_data['name'].'</h1>
+					<h2 id="card-desc">'.$contact_data['description'].'</h2>
+					<div id="card-links">    
+						<a class="card-link" href="./pages/blog.php">Blog</a>
+						<a class="card-link" href="./pages/gallery.php">Gallerie</a>
+					</div>
+				</div>
+				'
+			?>
         </div>
         
         <div id="content">
