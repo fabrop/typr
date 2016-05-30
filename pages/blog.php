@@ -127,8 +127,7 @@
                                         echo 'checked';
                                     }
                                 } 
-                                echo '
-                                >
+                                echo '>
                                 <label for="number6">6</label>
                             </li>
                             <li>
@@ -139,8 +138,7 @@
                                         echo 'checked';
                                     }
                                 }
-                                echo '
-                                >
+                                echo '>
                                 <label for="number12">12</label></li>
                             <li>
                                 <input type="radio" name="number" onChange="this.form.submit();" value="20" id="number20"
@@ -150,10 +148,9 @@
                                         echo 'checked';
                                     }
                                 }
-                                echo '
-                                >
+                                echo '>
                                 <label for="number20">20</label>
-                                </li>
+                            </li>
                             
                             </ul>
                             <hr>
@@ -172,25 +169,21 @@
                                 <br>
                                 <a href="admin-blog-add.php">Post schreiben...</a>
                             </p>
-                        </form>
+                        
                     </div>
-                '; 
+                 
                     
-                ?>
+               
                     
                 </div>
             </main>
                
         <nav id="pagination">
             <ul>
-			<form action="" method="GET">
-			<?php
-				
-				echo '<input type="hidden" name="number" value='.$nbr_posts.'>';
-				echo '<input type="hidden" name="sort" value='.$sort.'>';
-                echo '<input type="hidden" name="tag[]" value='.$tag.'>';
+			';
+			
 				if(($cur_page - 2) > 1){
-					echo '<li><input type="submit" name="first" value="ersteSeite" /></li>';
+					echo '<li><input type="submit" name="first" value="Erste Seite" /></li>';
 				}
 				for($i = ($cur_page - 2);$i <= ($cur_page + 2);$i++){
 					if(($i >= 1)&&($i <= $cnt_pages)){
@@ -198,7 +191,7 @@
 					}
 				}
 				if(($cur_page + 2) < $cnt_pages){
-					echo '<li><input type="submit" name="last" value="letzteSeite" /></li>';
+					echo '<li><input type="submit" name="last" value="Letzte Seite" /></li>';
 				}
 			?>
 			</form>
