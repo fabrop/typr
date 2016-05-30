@@ -22,6 +22,7 @@ phone
 email
 logo
 navlogo
+description
 article_numb
 
 Home:

@@ -33,6 +33,17 @@
 						";
 				return $db->action($query);
 			}
+			
+			public function update_general($name,$desc,$numbr){
+				global $db;
+				
+				$query = "
+							UPDATE contact
+							SET name='$name', description='$desc', article_numb='$numbr'
+							WHERE id=1
+						";
+				return $db->action($query);
+			}
 		}
 	}
 	$insert = new Insert;	
