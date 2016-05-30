@@ -32,8 +32,9 @@
 					for($i = 1; $i <= $numbr['article_numb'];$i++){
 						$active_title = "title".$i;
 						$active_text = "txt".$i;
-						if(isset($_POST['$active_title'])&&isset($_POST['$active_text'])){
-							$insert->update_home($_POST['$active_title'],$_POST['$active_text'],$i);
+						if(isset($_POST[$active_title])&&isset($_POST[$active_text])){
+							$insert->update_home($_POST[$active_title],$_POST[$active_text],$i);
+							echo $active_text;
 						}
 					}
 					//echo $numbr['article_numb'];

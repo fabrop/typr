@@ -49,7 +49,7 @@
 				global $db;
 				
 				$query = "
-							UPDATE contact
+							UPDATE home
 							SET caption='$title', text='$text'
 							WHERE id=$numbr
 						";
