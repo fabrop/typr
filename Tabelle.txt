@@ -19,6 +19,8 @@ name
 adress
 phone
 email
+logo
+navlogo
 
 Home:
 id
