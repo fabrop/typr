@@ -37,14 +37,23 @@
 						$nbr_posts = 6;
 					}
 					
+					$raw_number = $query->get_number_posts();
+					$number_arr = mysqli_fetch_assoc($raw_number);
+					$number = $number_arr['count_posts'];
+					//echo $number;
+					$cnt_pages = ceil($number / $nbr_posts);
 					if(isset($_GET['page'])){
-						
-							$cur_page = $_GET['page'];
-						
+						$cur_page = $_GET['page'];
+					}
+					elseif(isset($_GET['first'])){
+						$cur_page = 1;
+					}	
+					elseif(isset($_GET['last'])){
+						$cur_page = $cnt_pages;
 					}
 					else{
 						$cur_page = 1;
-					}	
+					}
 					
 					if(isset($_GET['sort'])){
 						$sort = $_GET['sort'];
@@ -104,15 +113,11 @@
             <ul>
 			<form action="" method="GET">
 			<?php
-				$raw_number = $query->get_number_posts();
-				$number_arr = mysqli_fetch_assoc($raw_number);
-				$number = $number_arr['count_posts'];
-				//echo $number;
-				$cnt_pages = ceil($number / $nbr_posts);
+				
 				echo '<input type="hidden" name="number" value='.$nbr_posts.'>';
 				echo '<input type="hidden" name="sort" value='.$sort.'>';
 				if(($cur_page - 2) > 1){
-					echo '<li><input type="submit" name="page" value=1 /></li>';
+					echo '<li><input type="submit" name="first" value="ersteSeite" /></li>';
 				}
 				for($i = ($cur_page - 2);$i <= ($cur_page + 2);$i++){
 					if(($i >= 1)&&($i <= $cnt_pages)){
@@ -120,7 +125,7 @@
 					}
 				}
 				if(($cur_page + 2) < $cnt_pages){
-					echo '<li><input type="submit" name="page" value='.$cnt_pages.' /></li>';
+					echo '<li><input type="submit" name="last" value="letzteSeite" /></li>';
 				}
 			?>
 			</form>
