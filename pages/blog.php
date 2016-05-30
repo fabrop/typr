@@ -19,7 +19,8 @@
 
                 <div id="content">
 				<?php
-				
+					require_once('../modules/class_query.php');
+                    
 					function get_time($datetime){
                         $time = substr($datetime, 11, 8);
                         return $time;
@@ -29,7 +30,6 @@
                         return $date;
                     }
 					
-					require_once('../modules/class_query.php');
                     if(isset($_GET['number'])){
 						$nbr_posts = $_GET['number'];
 					}
@@ -82,12 +82,38 @@
                             <p>Kategorien:</p>
                             <ul>
                             ';
+                            $query = "SELECT DISTINCT tags FROM Posts";
+                            $tags = $db->action($query);
+                    
+                            if(isset($_GET['tag'])){
+                                print_r($_GET['tag']);
+                            }
                             
-                            /*
-                            <li><input type="checkbox" name="tag" onChange="this.form.submit();" value="1" id="tag1" ''><label for="tag1">Tag 1</label></li>
-                            <li><input type="checkbox" name="tag" onChange="this.form.submit();" value="2" id="tag2" checked><label for="tag2">Tag 2</label></li>
-                            <li><input type="checkbox" name="tag" onChange="this.form.submit();" value="3" id="tag3" checked><label for="tag3">Tag 3</label></li>
-                            */
+                            for ($i = 0; $tag = mysqli_fetch_assoc($tags); $i++){
+                                echo 
+                                    '<li>
+                                        <input 
+                                            type="checkbox" 
+                                            name="tag[]" 
+                                            onChange="this.form.submit();" 
+                                            value="'.$tag['tags'].'" 
+                                            id="tag['.$tag['tags'].']"
+                                            ';
+                                                echo 'checked';
+                                            }
+                                            
+                                echo '
+                                        >
+                                    
+                                        <label 
+                                            for="tag['.$tag['tags'].']"
+                                        >
+                                            '.$tag['tags'].'
+                                        </label>
+                                    </li>
+                                ';
+                                
+                            }
                             echo '
                             </ul>
                             <hr>
