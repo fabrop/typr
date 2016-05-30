@@ -15,6 +15,7 @@
             require_once '../modules/admin-navbar.php'; 
             require_once '../modules/class-insert.php'; 
 			require_once '../modules/class-query.php';
+			require_once '../modules/class-database.php';
         ?>
         
         <div class="section card" id="allposts">
@@ -25,8 +26,15 @@
             if(isset($_POST['title'])&&isset($_POST['text'])&&isset($_POST['tags'])){
 				$insert->update_posts($_GET['id'],$_POST['title'],$_POST['text'],$_POST['tags']);
 			}
-			
-			$raw_post = $query->get_one_post($_GET['id']);
+			global $db;
+				$query = "
+							SELECT *
+							FROM posts
+							WHERE id = ".$_GET['id']."
+						";
+						
+				$raw_post = $db->select($query);
+			//$raw_post = $query->get_one_post($_GET['id']);
 			$post = mysqli_fetch_assoc($raw_post);
             echo '<div class="section card">
 					<form method="post">
