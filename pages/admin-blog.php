@@ -57,7 +57,7 @@
                                 echo "<td>".get_time($row['date'])."</td>";
                                 echo "<td>".get_date($row['date'])."</td>";
                                 echo "<td>".str_word_count($row['content'])." Wörter</td>";
-                                echo "<td><a href=\"admin-blog-post.php?id=".$row['id']."\"><img alt=\"edit\" src=\"../img/edit.png\"></a></td>";
+                                echo "<td><a href=\"admin-blog-edit.php?id=".$row['id']."\"><img alt=\"edit\" src=\"../img/edit.png\"></a></td>";
                                 echo "<td><img alt=\"edit\" src=\"../img/delete.png\"><input type=\"submit\" name=\"deletePost\" value=\"".$row['id']."\" /></td>";
                             echo "</tr>\n";
                         } 
