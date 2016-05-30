@@ -15,12 +15,14 @@ alt_text
 description
 
 Contact:
+id
 name
 adress
 phone
 email
 logo
 navlogo
+article_numb
 
 Home:
 id

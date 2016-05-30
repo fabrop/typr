@@ -13,6 +13,10 @@
         
         <?php 
             require_once '../modules/admin-navbar.php'; 
+			require_once '../modules/class_database.php';
+			$query = "
+						SELECT 
+					"
         ?>
         
         <div class="section card">
