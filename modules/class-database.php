@@ -11,23 +11,12 @@
 				$this->connect = $mysqli;
 			}
 			
-			public function insert($query) {
+			public function action($query) {
 				$result = $this->connect->query($query);
 				
 				return $result;
 			}
 			
-			public function select($query) {
-				$result = $this->connect->query($query);
-				
-				return $result;
-			}
-            
-            public function delete($query) {
-                $result = $this->connect->query($query);
-				
-				return $result;
-            }
 		}
 	}
 	

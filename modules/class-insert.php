@@ -10,7 +10,7 @@
 							INSERT INTO posts(title,content,tags)
 							VALUES ('$title','$content','$tags')
 						";
-				return $db->insert($query);
+				return $db->action($query);
 			}
 			
 			public function insert_pics($title,$pic,$alt,$desc){
@@ -20,7 +20,7 @@
 							INSERT INTO posts(title,picture,alt_text,description)
 							VALUES ('$title','$pic','$alt','$desc')
 						";
-				return $db->insert($query);
+				return $db->action($query);
 			}
 			
 			public function update_posts($id,$title,$content,$tags){
@@ -31,7 +31,7 @@
 							SET title='$title', content='$content', tags='$tags'
 							WHERE id='$id'
 						";
-				return $db->insert($query);
+				return $db->action($query);
 			}
 		}
 	}

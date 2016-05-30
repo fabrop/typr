@@ -33,7 +33,7 @@
 							WHERE id = ".$_GET['id']."
 						";
 						
-				$raw_post = $db->select($query);
+				$raw_post = $db->action($query);
 			//$raw_post = $query->get_one_post($_GET['id']);
 			$post = mysqli_fetch_assoc($raw_post);
             echo '<div class="section card">

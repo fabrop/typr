@@ -10,7 +10,7 @@
 							FROM posts
 						";
 						
-				return $db->select($query);
+				return $db->action($query);
 			}
 			
 			public function get_posts($nbr,$page,$sort){
@@ -23,7 +23,7 @@
 							LIMIT $start,$nbr
 						";
 						
-				return $db->select($query);
+				return $db->action($query);
 			}
 			
 			public function get_one_post($nbr){
@@ -34,7 +34,7 @@
 							WHERE id = $nbr
 						";
 						
-				return $db->select($query);
+				return $db->action($query);
 			}
 		}
 	}
