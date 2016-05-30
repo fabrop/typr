@@ -68,7 +68,6 @@
 						$tags_processed = $tags_processed." tags = '".$var."' OR ";
 					}
 					$tags_processed = substr($tags_processed, 0, (strlen($tags_processed) -4));
-					echo $tags_processed;
 					$page = $query->get_posts($nbr_posts,$cur_page,$sort,$tags_processed);
 					
 					while ($row = mysqli_fetch_assoc($page)){

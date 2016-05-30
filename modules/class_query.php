@@ -19,9 +19,9 @@
 				$query = "
 							SELECT * 
 							FROM posts
+							WHERE $tags
 							ORDER BY id $sort
 							LIMIT $start,$nbr
-							WHERE $tags
 						";
 						
 				return $db->action($query);
