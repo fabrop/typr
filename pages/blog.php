@@ -13,12 +13,12 @@
         <main>
             <?php 
                 require_once '../modules/navbar.php';
-            ?>
+        
 
-            <div id="wrapper">
+            echo '<div id="wrapper">
 
-                <div id="content">
-				<?php
+                <div id="content">';
+				
 					require_once('../modules/class_query.php');
                     
 					function get_time($datetime){
@@ -65,7 +65,7 @@
 					$page = $query->get_posts($nbr_posts,$cur_page,$sort);
 					
 					while ($row = mysqli_fetch_assoc($page)){
-						echo '<article class="card article">
+						echo '<article class="card article grid-sel">
 								<a href="blog-post.php?id='.$row['id'].'">
 									<h3 class="article-heading">'.$row['title'].'</h3>
 									<p class="article-text">'.$row['content'].'</p>
@@ -100,6 +100,9 @@
                                                     echo 'checked';
                                                 }
                                             }
+                                            else {
+                                                echo 'checked';
+                                            }
                                             
                                 echo '
                                         >
@@ -119,49 +122,76 @@
                             <p>Anzahl Posts:</p>
                             <ul>
                             
-                            <li>
-                                <input type="radio" name="number" onChange="this.form.submit();" value="6" id="number6"
-                                ';
-                                if (isset($_GET['number'])) { 
-                                    if ($_GET['number']==6) {
+                                <li>
+                                    <input 
+                                    type="radio" 
+                                    name="number" 
+                                    onChange="this.form.submit();" 
+                                    value="6" 
+                                    id="number6"';
+                                    if ($nbr_posts==6) {
                                         echo 'checked';
                                     }
-                                } 
-                                echo '>
-                                <label for="number6">6</label>
-                            </li>
-                            <li>
-                                <input type="radio" name="number" onChange="this.form.submit();" value="12" id="number12"
-                                ';
-                                if (isset($_GET['number'])) { 
-                                    if ($_GET['number']==12) {
+                                    echo '>
+                                    <label for="number6">6</label>
+                                </li>
+                                <li>
+                                    <input 
+                                    type="radio" 
+                                    name="number" 
+                                    onChange="this.form.submit();" 
+                                    value="12" 
+                                    id="number12"';
+                                    if ($nbr_posts==12) {
                                         echo 'checked';
                                     }
-                                }
-                                echo '>
-                                <label for="number12">12</label></li>
-                            <li>
-                                <input type="radio" name="number" onChange="this.form.submit();" value="20" id="number20"
-                                ';
-                                if (isset($_GET['number'])) { 
-                                    if ($_GET['number']==20) {
+                                    echo '>
+                                    <label for="number12">12</label></li>
+                                <li>
+                                    <input 
+                                    type="radio" 
+                                    name="number" 
+                                    onChange="this.form.submit();" 
+                                    value="20" 
+                                    id="number20"';
+                                    if ($nbr_posts==20) {
                                         echo 'checked';
                                     }
-                                }
-                                echo '>
-                                <label for="number20">20</label>
-                            </li>
+                                    echo '>
+                                    <label for="number20">20</label>
+                                </li>
                             
                             </ul>
                             <hr>
                             <p>Sortierung:</p>
                             <ul>
-                            ';
-                            /*
-                            <li><input type=radio name="sort" onChange="this.form.submit();" value="DESC" id="sort-new" checked><label for="sort-new">Neueste zuerst</label></li>
-                            <li><input type=radio name="sort" onChange="this.form.submit();" value="ASC" id="sort-old"><label for="sort-old">&Auml;lteste zuerst</label></li>
-                            */
-                            echo '
+                                <li>
+                                    <input 
+                                        type=radio 
+                                        name="sort" 
+                                        onChange="this.form.submit();" 
+                                        value="DESC" 
+                                        id="sort-new"';
+                                        if (!isset($_GET['sort']) OR $sort=="DESC") { 
+                                            echo 'checked';
+                                        }
+                                        echo '>
+                                    <label for="sort-new">Neueste zuerst</label>
+                                </li>
+                                <li>
+                                    <input 
+                                        type=radio 
+                                        name="sort" 
+                                        onChange="this.form.submit();" 
+                                        value="ASC" 
+                                        id="sort-old"';
+                                        if (isset($_GET['sort'])) { 
+                                            if ($sort=="ASC") {
+                                                echo 'checked';
+                                            }
+                                        }
+                                    echo '>
+                                    <label for="sort-old">&Auml;lteste zuerst</label></li>
                             </ul>
                             <hr>
                             <p>
@@ -198,6 +228,14 @@
               
             </ul>
         </nav>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/masonry.js"></script>
+        <script>
+            $('#content').masonry({
+                itemSelector: '.grid-sel',
+                columnWidth: '.article'
+            });
+        </script>
         
 	</body>
 </html>
