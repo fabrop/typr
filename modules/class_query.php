@@ -46,6 +46,17 @@
 				
 				return $db->action($query);
 			}
+			
+			public function numbr_articles(){
+				global $db;
+				$query = "
+							SELECT id,article_numb
+							FROM Contact
+							WHERE id = 1
+						";
+				
+				return $db->action($query);
+			}
 		}
 	}
 	$query = new Query;
