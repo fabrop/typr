@@ -22,6 +22,17 @@
 						";
 				return $db->insert($query);
 			}
+			
+			public function update_posts($id,$title,$content,$tags){
+				global $db;
+				
+				$query = "
+							UPDATE posts
+							SET title='$title', content='$content', tags='$tags'
+							WHERE id='$id'
+						";
+				return $db->insert($query);
+			}
 		}
 	}
 	$insert = new Insert;	
