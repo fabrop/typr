@@ -44,6 +44,17 @@
 						";
 				return $db->action($query);
 			}
+			
+			public function update_home($title,$text,$numbr){
+				global $db;
+				
+				$query = "
+							UPDATE contact
+							SET caption='$title', text='$text'
+							WHERE id=$numbr
+						";
+				return $db->action($query);
+			}
 		}
 	}
 	$insert = new Insert;	

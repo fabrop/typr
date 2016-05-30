@@ -28,6 +28,14 @@
 						";
 					$raw_numbr = $db->action($query);
 					$numbr = mysqli_fetch_assoc($raw_numbr);
+					
+					for($i = 1; $i <= $numbr['article_numb'];$i++){
+						$active_title = "title".$i;
+						$active_text = "txt".$i;
+						if(isset($_POST['$active_title'])&&isset($_POST['$active_text'])){
+							$insert->update_home($_POST['$active_title'],$_POST['$active_text'],$i);
+						}
+					}
 					//echo $numbr['article_numb'];
 					$query = "
 							SELECT id,caption,text
@@ -51,6 +59,7 @@
 							</fieldset>
 						';
 					}
+					
 				?> 
                 
                 <div class="input">
