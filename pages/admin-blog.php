@@ -45,7 +45,7 @@
                         if(isset($_POST['deletePost'])) {
                             $delete = $_POST['deletePost'];
                             $query = "DELETE FROM Posts WHERE id = '$delete'"; 
-                            $db->delete($query);
+                            $db->action($query);
                         }
 
                         require_once('../modules/class_query.php');

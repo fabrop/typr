@@ -18,7 +18,22 @@
                     <label for="name">Name: </label>
                     <input type="text" name="name" value="Max Mustermann" id="name">
                 </div>
-
+                <div class="input">
+                    <label for="tel">Telefonnummer: </label>
+                    <input type="text" name="name" value="01234 12345" id="tel">
+                </div>
+                <div class="input">
+                    <label for="mail">Email-Adresse: </label>
+                    <input type="text" name="name" value="max.mustermann@provider.de" id="mail">
+                </div>
+                <div class="input">
+                    <label for="addr">Adresse: </label>
+                    <input type="text" name="name" value="Hauptstraße 123, 12345 Musterstadt" id="addr">
+                </div>
+                
+                <div class="input">
+                    <input type="submit" value="Speichern" id="save">
+                </div>
             </form>
         </div>
         
