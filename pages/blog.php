@@ -99,6 +99,8 @@
                                             value="'.$tag['tags'].'" 
                                             id="tag['.$tag['tags'].']"
                                             ';
+                                            echo $i;
+                                            if(isset($_GET['tag[$i]'])){
                                                 echo 'checked';
                                             }
                                             
