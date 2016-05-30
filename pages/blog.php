@@ -100,6 +100,21 @@
         
         <nav id="pagination">
             <ul>
+			<form action="" method="GET">
+			<?php
+				$raw_number = $query->get_number_posts();
+				$number_arr = mysqli_fetch_assoc($raw_number);
+				$number = $number_arr['count_posts'];
+				//echo $number;
+				$cnt_pages = ceil($number / $nbr_posts);
+				for($i = ($cur_page - 2);$i <= ($cur_page + 2);$i++){
+					if(($i >= 1)&&($i <= $cnt_pages)){
+						echo '<li><input type="submit" name="page" value='.$i.' /></li>';
+					}
+				}
+				
+			?>
+			</form>
                 <li><a href="#">&lt&lt<span> Vorherige Seite</span></a></li>
                 <li><a href="#">1</a></li>
                 <li><a href="#">2</a></li>

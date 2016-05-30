@@ -36,6 +36,16 @@
 						
 				return $db->action($query);
 			}
+			
+			public function get_number_posts(){
+				global $db;
+				$query = "
+							SELECT COUNT(*) AS count_posts
+							FROM posts
+						";
+				
+				return $db->action($query);
+			}
 		}
 	}
 	$query = new Query;
