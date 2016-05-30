@@ -29,7 +29,7 @@
 			public function get_one_post($nbr){
 				global $db;
 				$query = "
-							SELECT id,title,content,date 
+							SELECT *
 							FROM posts
 							WHERE id = $nbr
 						";
