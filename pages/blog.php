@@ -61,8 +61,15 @@
 					else{
 						$sort = 'DESC';
 					}	
+					$tags = $_GET['tag'];
 					
-					$page = $query->get_posts($nbr_posts,$cur_page,$sort);
+					$tags_processed = "";
+					foreach($tags as $var){
+						$tags_processed = $tags_processed." tags = '".$var."' OR ";
+					}
+					$tags_processed = substr($tags_processed, 0, (strlen($tags_processed) -4));
+					echo $tags_processed;
+					$page = $query->get_posts($nbr_posts,$cur_page,$sort,$tags_processed);
 					
 					while ($row = mysqli_fetch_assoc($page)){
 						echo '<article class="card article grid-sel">
@@ -83,9 +90,9 @@
                             <ul>
                             ';
                             $query = "SELECT DISTINCT tags FROM Posts";
-                            $tags = $db->action($query);
+                            $tag_row = $db->action($query);
                     
-                            for ($i = 0; $tag = mysqli_fetch_assoc($tags); $i++){
+                            for ($i = 0; $tag = mysqli_fetch_assoc($tag_row); $i++){
                                 echo 
                                     '<li>
                                         <input 

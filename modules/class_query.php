@@ -13,7 +13,7 @@
 				return $db->action($query);
 			}
 			
-			public function get_posts($nbr,$page,$sort){
+			public function get_posts($nbr,$page,$sort,$tags){
 				global $db;
 				$start = ($nbr * ($page - 1));
 				$query = "
@@ -21,6 +21,7 @@
 							FROM posts
 							ORDER BY id $sort
 							LIMIT $start,$nbr
+							WHERE $tags
 						";
 						
 				return $db->action($query);
