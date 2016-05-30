@@ -38,7 +38,9 @@
 					}
 					
 					if(isset($_GET['page'])){
-						$cur_page = $_GET['page'];
+						
+							$cur_page = $_GET['page'];
+						
 					}
 					else{
 						$cur_page = 1;
@@ -122,13 +124,7 @@
 				}
 			?>
 			</form>
-                <li><a href="#">&lt&lt<span> Vorherige Seite</span></a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#"><span>N&auml;chste Seite </span>&gt&gt</a></li>
+              
             </ul>
         </nav>
         
