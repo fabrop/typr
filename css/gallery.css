@@ -38,29 +38,6 @@ main {
 #sidebar a:hover, #sidebar a:active {
     color: #1f7f5f;
 }
-article {
-    padding: 15px 30px 15px 30px;
-    margin: 10px;
-    width: calc(50% - 20px);
-    float: left;
-}
-article a {
-    color: black;
-}
-article:hover {
-    box-shadow: 0 0 5px #1f7f5f;
-}
-.article-heading {
-    font-size: 1.4em;
-}
-.article-text {
-    text-align: justify;
-}
-.date {
-    margin-bottom: 0;
-    text-align: right;
-    color: #9f9f9f;
-}
 #sidebar ul {
     list-style: none;
     padding: 0;
@@ -96,12 +73,6 @@ article:hover {
     background-color: white;
     color: #1f7f5f;
     border: 2px solid #1f7f5f
-}
-
-@media only screen and (max-width: 1400px) {
-    article {
-        width: 100%;
-    }
 }
 
 @media only screen and (max-width: 850px) {
