@@ -13,20 +13,31 @@
         
         <?php 
             require_once '../modules/navbar.php';
-        ?>
+			require_once '../modules/class-database.php';
+			$query = "
+					SELECT * 
+					FROM contact
+					WHERE id=1
+					";
+			$raw_data = $db->action($query);
+			$data = mysqli_fetch_assoc($raw_data);
+			echo '
+				<div id="wrapper" class="card">
+					<h3>Name</h3>
+					<p>'.$data['name'].'</p>
 
-        <div id="wrapper" class="card">
-            <h3>Name</h3>
-            <p>Max Mustermann</p>
+					<h3>Telefonnummer</h3>
+					<p>'.$data['phone'].'</p>
 
-            <h3>Telefonnummer</h3>
-            <p>01235 12345</p>
+					<h3>Email-Adresse</h3>
+					<p>'.$data['email'].'</p>
 
-            <h3>Email-Adresse</h3>
-            <p>max.mustermann@provider.de</p>
+					<h3>Adresse</h3>
+					<p>'.$data['adress'].'</p>
+				</div>
+				';
+		?>
 
-            <h3>Adresse</h3>
-            <p>Hauptstraße 123<br>12345 Musterstadt</p>
-        </div>
+        
 	</body>
 </html>
