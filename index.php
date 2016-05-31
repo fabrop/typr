@@ -41,12 +41,22 @@
         <div id="content">
         
         ';
+            $query_numbr = "
+                    SELECT id,article_numb
+                    FROM Contact
+                    WHERE id = 1
+                ";
+            $raw_numbr = $db->action($query_numbr);
+            $numbr = mysqli_fetch_assoc($raw_numbr);
+
+            
             $query = "
 							SELECT id,caption,text
 							FROM home
 						";
             $result = $db->action($query);
-            while ($article = mysqli_fetch_assoc($result)) {
+            for($i = 1; $i <= $numbr['article_numb'];$i++){
+                $article = mysqli_fetch_assoc($result);
                 echo '
                 <div class="article">
                 <h3 class="article-head">
