@@ -16,7 +16,7 @@
       
         <div class="section card">
             <form action="admin-gallery.php" method="post">
-                
+                <!-- WORK IN PROGRESS -->
             </form>
         </div>
         
