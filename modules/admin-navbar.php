@@ -1,5 +1,13 @@
+<?php
+				session_start();
+				header("Cache-control: private");
+				
+				if (!($_SESSION['access'] == "granted"))
+				  
+				  header("Location: ./login.php");
+			?> 
 <div id="navbar" class="section card">
-    <h1 id="admin-title">Admin</h1> <!-- php dyn -->
+    <h1 id="admin-title">Admin</h1> 
     <nav>
         <ul>
             <li><a href="../admin/admin-general.php">Allgemein</a></li>
