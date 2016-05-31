@@ -36,6 +36,36 @@
                             <div class="desc">Lorem Ipsum dolor sit amet.</div>
                         </div>
                     </article>
+                    <article class="card">
+                        <div class="img">
+                            <img src="../gallery/4.png" alt="4.png" >
+                            <div class="desc">Lorem Ipsum dolor sit amet.</div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="img">
+                            <img src="../gallery/5.png" alt="5.png" >
+                            <div class="desc">Lorem Ipsum dolor sit amet.</div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="img">
+                            <img src="../gallery/6.png" alt="6.png" >
+                            <div class="desc">Lorem Ipsum dolor sit amet.</div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="img">
+                            <img src="../gallery/7.png" alt="7.png" >
+                            <div class="desc">Lorem Ipsum dolor sit amet.</div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="img">
+                            <img src="../gallery/8.png" alt="8.png" >
+                            <div class="desc">Lorem Ipsum dolor sit amet.</div>
+                        </div>
+                    </article>
                 </div>
                 
                 <div id="imgModal" class="modal">
