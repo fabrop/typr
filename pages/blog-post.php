@@ -36,19 +36,19 @@
 					echo '<h3 class="article-heading">'.$post['title'].'</h3>';
 					echo '<p class="article-text">'.$post['content'].'</p>';
 					echo '<p class="date">'.get_time($post['date']).' - '.get_date($post['date']).'</p>';
-					?>
+					
+                    echo '
                 </article>
             </div>
 
             <div id="sidebar" class="card">
-                <h2 id="sidebar-tag">Kategorien</h2>
-                <ul>
-                    <li>Tag 1</li>
-                    <li>Tag 2</li>
-                    <li>Tag 3</li>
-                </ul>
-                <hr>
-                <?php 
+                
+                <p id="sidebar-tag">Kategorie:</p>
+                ';
+                echo '<a href="blog.php?tag[]='.$post['tags'].'">'.$post['tags'].'</a>';
+                    
+                echo '<hr>';
+                 
                     if(isset($_GET['id'])) {
                         echo "<a href=\"admin-blog-edit.php?id=";
                         echo $_GET['id'];
