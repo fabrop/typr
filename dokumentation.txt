@@ -1,1 +1,6 @@
 /js/jquery.js und /js/masonry.js sind fertige JavaScript Libraries, die wir zum Erstellen des Grid-Layouts in /pages/blog.php verwendet haben.
+
+Die Zugangsdaten für den Admin-Bereich: 
+	User "admin" 
+	Passwort "geheim"
+

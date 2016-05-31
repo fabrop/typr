@@ -115,23 +115,28 @@
             </ul>
         </nav>
         <script>
+            // ganzer overlay container 
             var modal = document.getElementById('imgModal');
-
+            // schließen element
             var span = document.getElementsByClassName("x")[0];
-
+            // schließen funktionsaufruf
             span.onclick = function() { 
                 modal.style.display = "none";
             }
-
+            // bilder-array
             var images = document.getElementsByTagName('img');
+            // overlay-bild
             var modalImg = document.getElementById("image");
+            // overlay-bildunterschrift
             var captionText = document.getElementById("caption");
-            var i;
-            for (i = 0; i < images.length; i++) {
+            
+            for (var i = 0; i < images.length; i++) {
                images[i].onclick = function(){
                    modal.style.display = "block";
+                   // bild und alt holen
                    modalImg.src = this.src;
                    modalImg.alt = this.alt;
+                   // bildunterschrift holen
                    captionText.innerHTML = this.nextElementSibling.innerHTML;
                }
             }
