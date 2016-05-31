@@ -82,7 +82,13 @@
 						echo '<article class="card article grid-sel">
 								<a href="blog-post.php?id='.$row['id'].'">
 									<h3 class="article-heading">'.$row['title'].'</h3>
-									<p class="article-text">'.$row['content'].'</p>
+									<p class="article-text">';
+                                    if (strlen($row['content'])>400) {
+                                        $row['content'] = substr($row['content'], 0, 400);
+                                        $row['content'] = $row['content']."...";
+                                    }
+                                    echo $row['content'].'
+                                    </p>
 									<p class="date">'.get_time($row['date']).' - '.get_date($row['date']).'</p>
 								</a>
 							</article>';
