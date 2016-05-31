@@ -19,7 +19,7 @@
 
                 <div id="content">';
 				
-					require_once('../modules/class_query.php');
+					require_once('../modules/class-query.php');
                     
 					function get_time($datetime){
                         $time = substr($datetime, 11, 8);

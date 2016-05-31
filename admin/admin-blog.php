@@ -80,7 +80,7 @@
                             $db->action($query);
                         }
 
-                        require_once('../modules/class_query.php');
+                        require_once('../modules/class-query.php');
                         $everything = $query->every_post();
 
                         while ($row = mysqli_fetch_assoc($everything)){

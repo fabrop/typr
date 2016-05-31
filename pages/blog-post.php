@@ -29,7 +29,7 @@
                         $date = substr($datetime, 0, 10);
                         return $date;
                     }
-					require_once'../modules/class_query.php';
+					require_once'../modules/class-query.php';
 					
 					$raw_post = $query->get_one_post($_GET['id']);
 					$post = mysqli_fetch_assoc($raw_post);
