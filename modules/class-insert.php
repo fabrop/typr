@@ -35,6 +35,17 @@
 				return $db->action($query);
 			}
 			
+			public function update_contact($name,$phone,$mail,$location){
+				global $db;
+				
+				$query = "
+							UPDATE contact
+							SET name='$name', phone='$phone', email='$mail', adress='$location'
+							WHERE id=1
+						";
+				return $db->action($query);
+			}
+			
 			public function update_general($name,$desc,$numbr){
 				global $db;
 				

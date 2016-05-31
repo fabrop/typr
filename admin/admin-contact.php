@@ -10,32 +10,50 @@
 	
 	<body>
         
-        <?php require '../modules/admin-navbar.php'; ?>
-        
-        <div class="section card">
-            <form action="" method="post">
-                <div class="input">
-                    <label for="name">Name: </label>
-                    <input type="text" name="name" value="Max Mustermann" id="name">
-                </div>
-                <div class="input">
-                    <label for="tel">Telefonnummer: </label>
-                    <input type="text" name="name" value="01234 12345" id="tel">
-                </div>
-                <div class="input">
-                    <label for="mail">Email-Adresse: </label>
-                    <input type="text" name="name" value="max.mustermann@provider.de" id="mail">
-                </div>
-                <div class="input">
-                    <label for="addr">Adresse: </label>
-                    <input type="text" name="name" value="Hauptstraße 123, 12345 Musterstadt" id="addr">
-                </div>
+        <?php require '../modules/admin-navbar.php'; 
+				require_once '../modules/class-database.php';
+				require_once '../modules/class-insert.php';
+				
+				if(isset($_POST['name'])&&isset($_POST['phone'])&&isset($_POST['email'])&&isset($_POST['adress'])){
+				$insert->update_contact($_POST['name'],$_POST['phone'],$_POST['email'],$_POST['adress']);
+				}
+				
+				$query = "
+						SELECT * 
+						FROM contact
+						WHERE id=1
+						";
+				$raw_data = $db->action($query);
+				$data = mysqli_fetch_assoc($raw_data);
+				echo'
+					<div class="section card">
+						<form action="" method="post">
+							<div class="input">
+								<label for="name">Name: </label>
+								<input type="text" name="name" value="'.$data['name'].'" id="name">
+							</div>
+							<div class="input">
+								<label for="tel">Telefonnummer: </label>
+								<input type="text" name="phone" value="'.$data['phone'].'" id="tel">
+							</div>
+							<div class="input">
+								<label for="mail">Email-Adresse: </label>
+								<input type="text" name="email" value="'.$data['email'].'" id="mail">
+							</div>
+							<div class="input">
+								<label for="addr">Adresse: </label>
+								<input type="text" name="adress" value="'.$data['adress'].'" id="addr">
+							</div>
                 
-                <div class="input">
-                    <input type="submit" value="Speichern" id="save">
-                </div>
-            </form>
-        </div>
+							<div class="input">
+								<input type="submit" value="Speichern" id="save">
+							</div>
+						</form>
+					</div>
+				';
+		?>
+        
+        
         
         <a id="link" href="../pages/contact.php">
             <img src="../img/back-arrow.png">
