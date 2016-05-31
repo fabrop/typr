@@ -77,7 +77,7 @@
                     <li><a href="./pages/blog.php" class="nav-link">Blog</a></li>
                     <li><a href="./pages/gallery.php" class="nav-link">Gallerie</a></li>
                     <li><a href="./pages/contact.php" class="nav-link">Kontakt</a></li>
-                    <li><a href="./pages/admin-landing.php" class="nav-link">Admin</a></li>
+                    <li><a href="./admin/admin-landing.php" class="nav-link">Admin</a></li>
                 </ul>
             </nav>
         </div>

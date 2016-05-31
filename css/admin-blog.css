@@ -8,6 +8,18 @@
 #addpost a:hover {
     color: #33cc99;
 }
+#from, #to {
+    width: 100px;
+}
+#range label {
+    display: inline;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #484848;
+}
+#range {
+    padding: 15px 20px;
+}
 table {
     width: 100%;
     margin-bottom: 15px;

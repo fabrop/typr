@@ -50,7 +50,7 @@
                 echo '<hr>';
                  
                     if(isset($_GET['id'])) {
-                        echo "<a href=\"admin-blog-edit.php?id=";
+                        echo "<a href=\"../admin/admin-blog-edit.php?id=";
                         echo $_GET['id'];
                         echo "\">Bearbeiten...</a>";
                     }

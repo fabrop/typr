@@ -37,7 +37,7 @@
             </form>
         </div>
         
-        <a id="link" href="contact.php">
+        <a id="link" href="../pages/contact.php">
             <img src="../img/back-arrow.png">
             <p>Zur&uuml;ck zur Kontaktseite</p>
         </a>

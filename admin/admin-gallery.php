@@ -20,7 +20,7 @@
             </form>
         </div>
         
-        <a id="link" href="gallery.php">
+        <a id="link" href="../pages/gallery.php">
             <img src="../img/back-arrow.png">
             <p>Zur&uuml;ck zur Gallerie</p>
         </a>

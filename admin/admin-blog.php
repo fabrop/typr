@@ -20,6 +20,22 @@
             <a href="admin-blog-add.php">Post hinzufügen...</a>
         </div>
         
+        <div class="section card" id="range">
+            <form action="" method="post">
+                <label for="from">Posts von </label>
+                <input type="number" 
+                       id="from" 
+                       name="from" 
+                       value=""
+                >
+                <label for="to">bis </label>
+                <input type="number" 
+                       id="to" 
+                       name="to"
+                       value=""
+                >
+            </form>
+        </div>
 
         <div class="section card">
             <form action="" method="POST">
@@ -68,7 +84,7 @@
             </form>
         </div>
         
-        <a id="link" href="blog.php">
+        <a id="link" href="../pages/blog.php">
             <img src="../img/back-arrow.png">
             <p>Zur&uuml;ck zum Blog</p>
         </a>

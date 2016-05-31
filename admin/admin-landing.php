@@ -19,7 +19,7 @@
         ?>    
       
         <div class="section card">
-            <form action="admin-landing.php" method="post">
+            <form action="" method="post">
                 <?php
 					$query = "
 							SELECT id,article_numb

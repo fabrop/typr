@@ -209,9 +209,9 @@
                             </ul>
                             <hr>
                             <p>
-                                <a href="admin-blog.php">Posts verwalten...</a>
+                                <a href="../admin/admin-blog.php">Posts verwalten...</a>
                                 <br>
-                                <a href="admin-blog-add.php">Post schreiben...</a>
+                                <a href="../admin/admin-blog-add.php">Post schreiben...</a>
                             </p>
                         
                     </div>

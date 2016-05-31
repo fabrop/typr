@@ -39,7 +39,7 @@
                 </div>
                 
                 <div id="imgModal" class="modal">
-                      <div class="x">×</div>
+                      <span class="close">×</span>
                       <img class="modal-content" id="image">
                       <div id="caption"></div>
                 </div>
@@ -60,9 +60,9 @@
                         </ul>
                         <hr>
                         <p>
-                            <a href="admin-gallery.php">Bilder verwalten...</a>
+                            <a href="../admin/admin-gallery.php">Bilder verwalten...</a>
                             <br>
-                            <a href="admin-gallery-add.php">Bild hinzufügen...</a>
+                            <a href="../admin/admin-gallery-add.php">Bild hinzufügen...</a>
                         </p>
                     </form>
                 </div>
@@ -83,16 +83,16 @@
         </nav>
         <script>
             var modal = document.getElementById('imgModal');
-            var div = document.getElementsByClassName("x")[0];
 
-            div.onclick = function() { 
+            var span = document.getElementsByClassName("close")[0];
+
+            span.onclick = function() { 
                 modal.style.display = "none";
             }
 
             var images = document.getElementsByTagName('img');
             var modalImg = document.getElementById("image");
             var captionText = document.getElementById("caption");
-            
             var i;
             for (i = 0; i < images.length; i++) {
                images[i].onclick = function(){

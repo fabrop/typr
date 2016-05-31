@@ -50,7 +50,7 @@
 		?>
         
         
-        <a id="link" href="blog.php">
+        <a id="link" href="../pages/blog.php">
             <img src="../img/back-arrow.png">
             <p>Zur&uuml;ck zum Blog</p>
         </a>
