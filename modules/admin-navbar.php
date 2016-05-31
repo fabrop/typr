@@ -15,6 +15,7 @@
             <li><a href="../admin/admin-blog.php">Blog</a></li>
             <li><a href="../admin/admin-gallery.php">Gallerie</a></li>
             <li><a href="../admin/admin-contact.php">Kontakt</a></li>
+            <li><a href="../admin/logout.php">Logout</a></li>
         </ul>
     </nav>
 </div>

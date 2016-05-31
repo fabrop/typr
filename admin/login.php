@@ -19,5 +19,10 @@
 			<br />
 			<input type="submit" name="submit" value="Submit" id="save"/>
 		</form>
+        
+        <a id="link" href="../index.php">
+            <img src="../img/back-arrow.png">
+            <p>Zur&uuml;ck zur Startseite</p>
+        </a>
 	</body>
 </html>
