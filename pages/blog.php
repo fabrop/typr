@@ -30,22 +30,26 @@
                         return $date;
                     }
 					
-                    if(isset($_GET['number'])){ //überprüfen, wie viele Posts pro Seite angezeigt werden sollen
+                    // überprüfen, wie viele posts pro seite angezeigt werden sollen
+                    if(isset($_GET['number'])){ 
 						$nbr_posts = $_GET['number'];
 					}
 					else{
 						$nbr_posts = 6;
 					}
 					
-					$raw_number = $query->get_number_posts(); //Gesamtanzahl an Posts ermitteln
+                    // gesamtanzahl an posts ermitteln
+					$raw_number = $query->get_number_posts(); 
 					$number_arr = mysqli_fetch_assoc($raw_number);
 					$number = $number_arr['count_posts'];
                     
-					$cnt_pages = ceil($number / $nbr_posts); //benötigte Seitenanzahl ermitteln
+                    // benötigte seitenanzahl ermitteln
+					$cnt_pages = ceil($number / $nbr_posts); 
 					if(isset($_GET['page'])){
 						$cur_page = $_GET['page'];
 					}
-					elseif(isset($_GET['first'])){ //überprüfen ob Buttons für erste oder letzte Seite geklickt wurden
+                    // überprüfen ob buttons für erste oder letzte seite geklickt wurden
+					elseif(isset($_GET['first'])){ 
 						$cur_page = 1;
 					}	
 					elseif(isset($_GET['last'])){
@@ -72,13 +76,14 @@
 					}
 					$tags_processed = "";
 					foreach($tags as $var){
-						$tags_processed = $tags_processed." tags = '".$var."' OR "; //query teil für die Tags bauen und nur ausgewählte Tags auswählen
+                        // query teil für die tags bauen und nur ausgewählte tags auswählen
+						$tags_processed = $tags_processed." tags = '".$var."' OR "; 
 					}
 					$tags_processed = substr($tags_processed, 0, (strlen($tags_processed) -4));
 					$page = $query->get_spec_posts($nbr_posts,$cur_page,$sort,$tags_processed);
 					
-					
-					while ($row = mysqli_fetch_assoc($page)){ //aus dem query result den Seiteninhalt aufbauen
+					// aus dem query result den seiteninhalt aufbauen
+					while ($row = mysqli_fetch_assoc($page)){ 
 						echo '<article class="card article grid-sel">
 								<a href="blog-post.php?id='.$row['id'].'">
 									<h3 class="article-heading">'.$row['title'].'</h3>
@@ -95,7 +100,8 @@
 					}
 				
                 echo '</div>';
-                // Seitenleiste mit Sortieroptionen für den Seiteninhalt
+            
+                // seitenleiste mit sortieroptionen für den seiteninhalt
                 echo '
                     <div id="sidebar" class="card">  
                         <form method="GET">
@@ -231,11 +237,12 @@
         <nav id="pagination">
             <ul>
 			';
-			// Buttons, um zwischen den Seiten zu wechseln dynamisch an die Anzahl an Posts anpassen
+			// buttons, um zwischen den seiten zu wechseln dynamisch an die anzahl an posts anpassen
 				if(($cur_page - 2) > 1){
 					echo '<li><input type="submit" name="first" value="Erste Seite" /></li>';
 				}
-				for($i = ($cur_page - 2);$i <= ($cur_page + 2);$i++){ //jeweils zwei Seiten Abstand zur aktuellen Seite werden angezeigt, zudem noch die erste uns letzte seite, sollten dise nicht enthalten sein
+				for($i = ($cur_page - 2);$i <= ($cur_page + 2);$i++){ 
+                // jeweils zwei seiten abstand zur aktuellen seite werden angezeigt. zudem noch die erste und letzte seite, sollten dise nicht enthalten sein
 					if(($i >= 1)&&($i <= $cnt_pages)){
 						echo '<li><input type="submit" name="page" value='.$i.' /></li>';
 					}

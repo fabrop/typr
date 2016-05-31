@@ -1,11 +1,12 @@
-<?php //Kontrolle, ob der Nutzer berechtigt ist, Adminseiten zu betreten
-				session_start();
-				header("Cache-control: private");
-				
-				if (!($_SESSION['access'] == "granted"))
-				  
-				  header("Location: ./login.php");//bei ungültiger session überleitung zum login screen
-			?> 
+<?php 
+    // kontrolle, ob der nutzer berechtigt ist, adminseiten zu betreten
+    session_start();
+    header("Cache-control: private");
+
+    if (!($_SESSION['access'] == "granted"))
+        // bei ungültiger session überleitung zum login screen
+        header("Location: ./login.php");
+?> 
 <div id="navbar" class="section card">
     <h1 id="admin-title">Admin</h1> 
     <nav>
@@ -19,4 +20,4 @@
         </ul>
     </nav>
 </div>
-<!-- diese Navbar wird in jeder Adminseite eingebaut. So könen Berechtigungen überprüft werden und es wird ein gleichmäßiges Layout geschaffen. -->
+<!-- diese navbar wird in jeder adminseite eingebaut. So können berechtigungen überprüft werden und es wird ein gleichmäßiges layout geschaffen -->

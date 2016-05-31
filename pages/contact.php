@@ -12,7 +12,7 @@
 	<body>
         
         <?php 
-		//Alle Kontaktdaten wrden aufgerufen und in die vorgesehenen Felder geschrieben
+		// alle kontaktdaten wrden aufgerufen und in die vorgesehenen felder geschrieben
             require_once '../modules/navbar.php';
 			require_once '../modules/class-database.php';
 			$query = "
