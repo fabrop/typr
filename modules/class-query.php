@@ -12,6 +12,18 @@
 						
 				return $db->action($query);
 			}
+            
+            public function limit_post($from, $to){
+				global $db;
+                $nbr = $to - $from;
+				$query = "
+							SELECT * 
+							FROM posts
+							LIMIT $from,$nbr
+						";
+						
+				return $db->action($query);
+			}
 			
 			public function get_posts($nbr,$page,$sort){
 				global $db;

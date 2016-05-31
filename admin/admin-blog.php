@@ -28,9 +28,10 @@
                     name="from" 
                     value="';
                     if(isset($_GET['from'])) {
-                        echo $_GET['from'];
+                        $from = $_GET['from'];
                     }
-                    else echo '0';
+                    else $from = 1;
+                    echo $from;
                     echo '"
                 >
                 <label for="to">bis </label>
@@ -39,9 +40,10 @@
                     name="to"
                     value="';
                     if(isset($_GET['to'])) {
-                        echo $_GET['to'];
+                        $to = $_GET['to'];
                     }
-                    else echo '100';
+                    else $to = 99;
+                    echo $to;
                     echo '"
                 >
                 <div id="posfix">
@@ -81,7 +83,7 @@
                         }
 
                         require_once('../modules/class-query.php');
-                        $everything = $query->every_post();
+                        $everything = $query->limit_post($from-1, $to);
 
                         while ($row = mysqli_fetch_assoc($everything)){
                             echo "<tr>\n";

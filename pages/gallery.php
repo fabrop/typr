@@ -39,7 +39,7 @@
                 </div>
                 
                 <div id="imgModal" class="modal">
-                      <span class="close">×</span>
+                      <span class="x">×</span>
                       <img class="modal-content" id="image">
                       <div id="caption"></div>
                 </div>
@@ -84,7 +84,7 @@
         <script>
             var modal = document.getElementById('imgModal');
 
-            var span = document.getElementsByClassName("close")[0];
+            var span = document.getElementsByClassName("x")[0];
 
             span.onclick = function() { 
                 modal.style.display = "none";

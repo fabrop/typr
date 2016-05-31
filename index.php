@@ -36,11 +36,13 @@
 						<a class="card-link" href="./pages/gallery.php">Gallerie</a>
 					</div>
 				</div>
-				'
-			?>
         </div>
         
         <div id="content">
+        
+        ';
+            
+            /*
             <div class="article">
                 <h3 class="article-head">Lorem ipsum dolor</h3>
                 <hr>
@@ -69,7 +71,8 @@
                 <img class="article-img">
             </div>
         </div>
-            
+        */  
+        ?>
         
         <div id="footer">
             <nav>
