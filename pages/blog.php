@@ -30,22 +30,22 @@
                         return $date;
                     }
 					
-                    if(isset($_GET['number'])){
+                    if(isset($_GET['number'])){ //überprüfen, wie viele Posts pro Seite angezeigt werden sollen
 						$nbr_posts = $_GET['number'];
 					}
 					else{
 						$nbr_posts = 6;
 					}
 					
-					$raw_number = $query->get_number_posts();
+					$raw_number = $query->get_number_posts(); //Gesamtanzahl an Posts ermitteln
 					$number_arr = mysqli_fetch_assoc($raw_number);
 					$number = $number_arr['count_posts'];
                     
-					$cnt_pages = ceil($number / $nbr_posts);
+					$cnt_pages = ceil($number / $nbr_posts); //benötigte Seitenanzahl ermitteln
 					if(isset($_GET['page'])){
 						$cur_page = $_GET['page'];
 					}
-					elseif(isset($_GET['first'])){
+					elseif(isset($_GET['first'])){ //überprüfen ob Buttons für erste oder letzte Seite geklickt wurden
 						$cur_page = 1;
 					}	
 					elseif(isset($_GET['last'])){
@@ -72,13 +72,13 @@
 					}
 					$tags_processed = "";
 					foreach($tags as $var){
-						$tags_processed = $tags_processed." tags = '".$var."' OR ";
+						$tags_processed = $tags_processed." tags = '".$var."' OR "; //query teil für die Tags bauen und nur ausgewählte Tags auswählen
 					}
 					$tags_processed = substr($tags_processed, 0, (strlen($tags_processed) -4));
 					$page = $query->get_spec_posts($nbr_posts,$cur_page,$sort,$tags_processed);
 					
 					
-					while ($row = mysqli_fetch_assoc($page)){
+					while ($row = mysqli_fetch_assoc($page)){ //aus dem query result den Seiteninhalt aufbauen
 						echo '<article class="card article grid-sel">
 								<a href="blog-post.php?id='.$row['id'].'">
 									<h3 class="article-heading">'.$row['title'].'</h3>
@@ -95,13 +95,13 @@
 					}
 				
                 echo '</div>';
-                
+                // Seitenleiste mit Sortieroptionen für den Seiteninhalt
                 echo '
-                    <div id="sidebar" class="card"> 
+                    <div id="sidebar" class="card">  
                         <form method="GET">
                             <p>Kategorien:</p>
                             <ul>
-                            ';
+                            '; 
                             $query = "SELECT DISTINCT tags FROM Posts";
                             $tag_row = $db->action($query);
                     
@@ -231,11 +231,11 @@
         <nav id="pagination">
             <ul>
 			';
-			
+			// Buttons, um zwischen den Seiten zu wechseln dynamisch an die Anzahl an Posts anpassen
 				if(($cur_page - 2) > 1){
 					echo '<li><input type="submit" name="first" value="Erste Seite" /></li>';
 				}
-				for($i = ($cur_page - 2);$i <= ($cur_page + 2);$i++){
+				for($i = ($cur_page - 2);$i <= ($cur_page + 2);$i++){ //jeweils zwei Seiten Abstand zur aktuellen Seite werden angezeigt, zudem noch die erste uns letzte seite, sollten dise nicht enthalten sein
 					if(($i >= 1)&&($i <= $cnt_pages)){
 						echo '<li><input type="submit" name="page" value='.$i.' /></li>';
 					}

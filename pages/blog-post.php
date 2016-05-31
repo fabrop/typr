@@ -20,7 +20,7 @@
 
             <div id="content">
                 <article class="card article">
-                    <?php
+                    <?php //Funktionen, die den Timestamp der Datenbank in Zeit und Datum zerlegen
 					function get_time($datetime){
                         $time = substr($datetime, 11, 8);
                         return $time;
@@ -30,7 +30,7 @@
                         return $date;
                     }
 					require_once'../modules/class-query.php';
-					
+					//Aufruf des angezeigten Posts auf dieser Seite
 					$raw_post = $query->get_one_post($_GET['id']);
 					$post = mysqli_fetch_assoc($raw_post);
 					echo '<h3 class="article-heading">'.$post['title'].'</h3>';
@@ -48,7 +48,7 @@
                 echo '<a href="blog.php?tag[]='.$post['tags'].'">'.$post['tags'].'</a>';
                     
                 echo '<hr>';
-                 
+                 //Direktlink zum bearbeiten des Posts
                     if(isset($_GET['id'])) {
                         echo "<a href=\"../admin/admin-blog-edit.php?id=";
                         echo $_GET['id'];
