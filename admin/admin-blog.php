@@ -14,9 +14,9 @@
         <?php 
             require_once '../modules/admin-navbar.php';  
             require_once '../modules/class-database.php'; 
-        
+        //formular, mit dem die anzahl an angezeigten posts festgelegt werden kann
         echo ' 
-        <div class="section card" id="addpost">
+        <div class="section card" id="addpost"> 
             <a href="admin-blog-add.php">Post hinzufügen...</a>
         </div>
         
@@ -30,7 +30,7 @@
                     if(isset($_GET['from'])) {
                         $from = $_GET['from'];
                     }
-                    else $from = 1;
+                    else $from = 1; //standardwert, falls kein wert übergeben wurde
                     echo $from;
                     echo '"
                 >
@@ -42,7 +42,7 @@
                     if(isset($_GET['to'])) {
                         $to = $_GET['to'];
                     }
-                    else $to = 99;
+                    else $to = 99; //standardwert, falls kein wert übergeben wurde
                     echo $to;
                     echo '"
                 >
@@ -76,7 +76,7 @@
                             return $date;
                         }
                     
-                        if(isset($_POST['deletePost'])) {
+                        if(isset($_POST['deletePost'])) { //posts, die gelöscht wurden werden auf der datenbank gelöscht
                             $delete = $_POST['deletePost'];
                             $query = "DELETE FROM Posts WHERE id = '$delete'"; 
                             $db->action($query);
@@ -84,7 +84,7 @@
 
                         require_once('../modules/class-query.php');
                         $everything = $query->limit_post($from-1, $to);
-
+						//die gesamten posts werden in eine übersichtstabelle eingefügt, welche alle wichtigen informationen enthält
                         while ($row = mysqli_fetch_assoc($everything)){
                             echo "<tr>\n";
                                 echo "<td><a href=\"blog-post.php?id=".$row['id']."\">".$row['title']."</a></td>";
