@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 30. Mai 2016 um 23:18
+-- Erstellungszeit: 31. Mai 2016 um 04:10
 -- Server-Version: 10.1.13-MariaDB
 -- PHP-Version: 5.6.21
 
@@ -43,7 +43,7 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `name`, `adress`, `phone`, `email`, `logo`, `navlogo`, `description`, `article_numb`) VALUES
-(1, 'max der Mustermann', '', '', '', '', '', 'ich bin total schlau', 4);
+(1, 'max der Mustermann', '', '', '', '', '', 'ich bin total schlau', 3);
 
 -- --------------------------------------------------------
 
@@ -57,6 +57,20 @@ CREATE TABLE `home` (
   `caption` text NOT NULL,
   `text` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `home`
+--
+
+INSERT INTO `home` (`id`, `picture`, `caption`, `text`) VALUES
+(1, '', 'wbawoubwrsvwrvr', 'arewrwwrf'),
+(2, '', 'eierbrot', 'wurst'),
+(3, '', 'wiubvru', 'einbeoibe'),
+(4, '', 'wrvetee', 'etvrbrtbrt'),
+(5, '', 'trsbrzhrgbr', 'sreseadtgbg'),
+(6, '', 'srhztdv rt ', 'tdhaztjdxbrt'),
+(7, '', 'trsbrzhrgbr', 'sreseadtgbg'),
+(8, '', 'srhztdv rt ', 'tdhaztjdxbrt');
 
 -- --------------------------------------------------------
 
@@ -142,7 +156,7 @@ ALTER TABLE `pics`
 -- AUTO_INCREMENT für Tabelle `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
