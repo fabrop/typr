@@ -14,29 +14,45 @@
         <?php 
             require_once '../modules/admin-navbar.php';  
             require_once '../modules/class-database.php'; 
-        ?> 
-      
+        
+        echo ' 
         <div class="section card" id="addpost">
             <a href="admin-blog-add.php">Post hinzufügen...</a>
         </div>
         
         <div class="section card" id="range">
-            <form action="" method="post">
+            <form action="" method="GET">
                 <label for="from">Posts von </label>
                 <input type="number" 
-                       id="from" 
-                       name="from" 
-                       value=""
+                    id="from" 
+                    name="from" 
+                    value="';
+                    if(isset($_GET['from'])) {
+                        echo $_GET['from'];
+                    }
+                    else echo '0';
+                    echo '"
                 >
                 <label for="to">bis </label>
                 <input type="number" 
-                       id="to" 
-                       name="to"
-                       value=""
+                    id="to" 
+                    name="to"
+                    value="';
+                    if(isset($_GET['to'])) {
+                        echo $_GET['to'];
+                    }
+                    else echo '100';
+                    echo '"
                 >
+                <div id="posfix">
+                    <span id="arrows"><img src="../img/refresh.png" alt=""></span>
+                    <input type="submit" id="refresh" value="">
+                </div>
+                
             </form>
-        </div>
-
+        </div>';
+        ?>
+     
         <div class="section card">
             <form action="" method="POST">
                 <table>

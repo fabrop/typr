@@ -8,8 +8,13 @@
 #addpost a:hover {
     color: #33cc99;
 }
+#range label, #range input {
+    position: relative;
+    top: -10px;
+}
 #from, #to {
-    width: 100px;
+    width: 80px;
+    margin: 0 5px;
 }
 #range label {
     display: inline;
@@ -19,6 +24,39 @@
 }
 #range {
     padding: 15px 20px;
+    height: 54px;
+    overflow: hidden;
+}
+#posfix {
+    position: relative;
+    display: inline;
+    top: 10px;
+    left: -32px;
+}
+#refresh {
+    width: 28px;
+    height: 28px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+}
+#refresh:hover {
+    cursor: pointer;
+}
+#arrows {
+    height: 28px;
+}
+#arrows img {
+    height: 28px;
+    position: relative;
+    top: -10px;
+    left: 32px;
+    opacity: 0.7;
+}
+#posfix:hover {
+    opacity: 0.7;
 }
 table {
     width: 100%;
@@ -56,10 +94,10 @@ td:nth-child(6) img {
     left: 0px;
     top: 11px;
 }
-img {
+table img {
     height: 1em;
 }
-img:hover {
+table input:hover {
     cursor: pointer;
 }
 table a:hover {
