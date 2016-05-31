@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 31. Mai 2016 um 04:10
+-- Erstellungszeit: 31. Mai 2016 um 05:28
 -- Server-Version: 10.1.13-MariaDB
 -- PHP-Version: 5.6.21
 
@@ -43,7 +43,7 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `name`, `adress`, `phone`, `email`, `logo`, `navlogo`, `description`, `article_numb`) VALUES
-(1, 'max der Mustermann', '', '', '', '', '', 'ich bin total schlau', 3);
+(1, 'max der Mustermann', 'Wursterstr. 13 <br> 1234 Musterstadt', '12345/09876', 'beispiel@max.de', '', '', 'ich bin total schlau', 3);
 
 -- --------------------------------------------------------
 
@@ -116,6 +116,25 @@ INSERT INTO `posts` (`id`, `title`, `content`, `date`, `tags`) VALUES
 (9, 'furz', 'wsgcirz', '2016-05-30 19:12:11', 'wrhrio'),
 (10, 'salami', 'Pferd <br>\r\nGemÃ¼se', '2016-05-30 19:12:35', 'kochen');
 
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `pw_hash` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `user`
+--
+
+INSERT INTO `user` (`id`, `name`, `pw_hash`) VALUES
+(1, 'admin', '906072001efddf3e11e6d2b5782f4777fe038739');
+
 --
 -- Indizes der exportierten Tabellen
 --
@@ -139,6 +158,12 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indizes für die Tabelle `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT für exportierte Tabellen
 --
 
@@ -157,6 +182,11 @@ ALTER TABLE `pics`
 --
 ALTER TABLE `posts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+--
+-- AUTO_INCREMENT für Tabelle `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

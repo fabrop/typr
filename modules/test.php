@@ -1,5 +1,5 @@
 <html><?php
-	$titel = "wubi";
+	/*$titel = "wubi";
 	$cont = "ruwebvo";
 	$tag = "vnue";
 	error_reporting(E_ALL);
@@ -10,8 +10,11 @@
 	$everything = $query->every_post();
 	while($row = mysqli_fetch_assoc($everything)){
 		printf ("%s (%s)\n", $row["title"], $row["content"]);
-	}
-	
+	}*/
+	$password = "geheim";
+	$password = sha1($password);
+
+	echo $password; 
 ?>
 <form action="upTest.php" method="post" enctype="multipart/form-data">
 <input type="file" name="datei"><br>

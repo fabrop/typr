@@ -1,4 +1,12 @@
-            <div id="top" class="clearfix">
+            <?php
+				session_start();
+				header("Cache-control: private");
+				if ($_SESSION["access"] == "granted")
+				  header("Location: ./secure.php");
+				else
+				  header("Location: ./login.php");
+			?> 
+			<div id="top" class="clearfix">
                 <a href="../index.php">
                     <img id="logo" alt="blog-logo" src="../img/blog-logo.png">
                 </a>
