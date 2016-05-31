@@ -21,7 +21,7 @@
         <div class="section card">
             <form action="" method="post">
                 <?php
-                    /* anzahl artikel herausfinden */
+                    // anzahl artikel herausfinden
 					$query = "
 							SELECT id,article_numb
 							FROM Contact
@@ -30,7 +30,7 @@
 					$raw_numbr = $db->action($query);
 					$numbr = mysqli_fetch_assoc($raw_numbr);
 					
-                    /* artikel mit formulardaten updaten */
+                    // artikel mit formulardaten updaten
 					for($i = 1; $i <= $numbr['article_numb'];$i++){
 						$active_title = "title".$i;
 						$active_text = "txt".$i;
@@ -40,13 +40,13 @@
 						}
 					}
                 
-                    /* aktuelle artikel holen */
+                    // aktuelle artikel holen 
 					$query = "
 							SELECT id,caption,text
 							FROM home
 						";
 					$result = $db->action($query);
-                    /* artikel inputs generieren */
+                    // artikel inputs generieren 
 					for($i = 1; $i <= $numbr['article_numb'];$i++){
 						$content = mysqli_fetch_assoc($result);
 						echo '

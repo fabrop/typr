@@ -16,16 +16,17 @@
             require_once '../modules/class-insert.php'; 
 			require_once '../modules/class-query.php';
 			require_once '../modules/class-database.php';
-        ?>
         
+        echo '
         <div class="section card" id="allposts">
             <a href="admin-blog.php">Posts verwalten...</a>
         </div>
-        <?php
-			
+        ';
+			// mit formulardaten aktuellen blog updaten
             if(isset($_POST['title'])&&isset($_POST['text'])&&isset($_POST['tags'])){
 				$insert->update_posts($_GET['id'],$_POST['title'],$_POST['text'],$_POST['tags']);
 			}
+            // blogdaten aus datenbank holen
 			global $db;
 				$query = "
 							SELECT *
@@ -34,8 +35,9 @@
 						";
 						
 				$raw_post = $db->action($query);
-			//$raw_post = $query->get_one_post($_GET['id']);
+            
 			$post = mysqli_fetch_assoc($raw_post);
+            // blog-bearbeitungsformular generieren
             echo '<div class="section card">
 					<form method="post">
 						<label for="title">Titel: </label><input type="text" id="title" name="title" value='.$post['title'].'>
