@@ -14,45 +14,47 @@
         <?php 
             require_once '../modules/admin-navbar.php';  
             require_once '../modules/class-database.php'; 
-        //formular, mit dem die anzahl an angezeigten posts festgelegt werden kann
-        echo ' 
-        <div class="section card" id="addpost"> 
-            <a href="admin-blog-add.php">Post hinzufügen...</a>
-        </div>
-        
-        <div class="section card" id="range">
-            <form action="" method="GET">
-                <label for="from">Posts von </label>
-                <input type="number" 
-                    id="from" 
-                    name="from" 
-                    value="';
-                    if(isset($_GET['from'])) {
-                        $from = $_GET['from'];
-                    }
-                    else $from = 1; //standardwert, falls kein wert übergeben wurde
-                    echo $from;
-                    echo '"
-                >
-                <label for="to">bis </label>
-                <input type="number" 
-                    id="to" 
-                    name="to"
-                    value="';
-                    if(isset($_GET['to'])) {
-                        $to = $_GET['to'];
-                    }
-                    else $to = 99; //standardwert, falls kein wert übergeben wurde
-                    echo $to;
-                    echo '"
-                >
-                <div id="posfix">
-                    <span id="arrows"><img src="../img/refresh.png" alt=""></span>
-                    <input type="submit" id="refresh" value="">
-                </div>
-                
-            </form>
-        </div>';
+            // formular, mit dem die anzahl an angezeigten posts festgelegt werden kann
+            echo ' 
+            <div class="section card" id="addpost"> 
+                <a href="admin-blog-add.php">Post hinzufügen...</a>
+            </div>
+
+            <div class="section card" id="range">
+                <form action="" method="GET">
+                    <label for="from">Posts von </label>
+                    <input type="number" 
+                        id="from" 
+                        name="from" 
+                        value="';
+                        if(isset($_GET['from'])) {
+                            $from = $_GET['from'];
+                        }
+                        // standardwert, falls kein wert übergeben wurde
+                        else $from = 1; 
+                        echo $from;
+                        echo '"
+                    >
+                    <label for="to">bis </label>
+                    <input type="number" 
+                        id="to" 
+                        name="to"
+                        value="';
+                        if(isset($_GET['to'])) {
+                            $to = $_GET['to'];
+                        }
+                         //standardwert, falls kein wert übergeben wurde
+                        else $to = 99;
+                        echo $to;
+                        echo '"
+                    >
+                    <div id="posfix">
+                        <span id="arrows"><img src="../img/refresh.png" alt=""></span>
+                        <input type="submit" id="refresh" value="">
+                    </div>
+
+                </form>
+            </div>';
         ?>
      
         <div class="section card">
@@ -87,7 +89,7 @@
 						//die gesamten posts werden in eine übersichtstabelle eingefügt, welche alle wichtigen informationen enthält
                         while ($row = mysqli_fetch_assoc($everything)){
                             echo "<tr>\n";
-                                echo "<td><a href=\"blog-post.php?id=".$row['id']."\">".$row['title']."</a></td>";
+                                echo "<td><a href=\"../pages/blog-post.php?id=".$row['id']."\">".$row['title']."</a></td>";
                                 echo "<td>".get_time($row['date'])."</td>";
                                 echo "<td>".get_date($row['date'])."</td>";
                                 echo "<td>".str_word_count($row['content'])." Wörter</td>";

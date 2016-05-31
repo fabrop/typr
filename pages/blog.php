@@ -142,12 +142,12 @@
                                 ';
                                 
                             }
+                            // posts pro seite form, checked mithilfe vorheriger formulardaten
                             echo '
                             </ul>
                             <hr>
                             <p>Anzahl Posts:</p>
                             <ul>
-                            
                                 <li>
                                     <input 
                                     type="radio" 
@@ -225,12 +225,7 @@
                                 <br>
                                 <a href="../admin/admin-blog-add.php">Post schreiben...</a>
                             </p>
-                        
                     </div>
-                 
-                    
-               
-                    
                 </div>
             </main>
                
