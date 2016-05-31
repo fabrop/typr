@@ -2,7 +2,8 @@
 	require_once('class-database.php');
 	
 	if(!class_exists('Insert')){
-		class insert{
+		class insert{ //Klasse, die dazu dient, mehrere verschiedene querys in Funktionen zu speichern und diese wiedrverwendbar zu machen
+						// Es folgen Methoden der Klasse insert, welche Schreibaufgaben auf der Datenbank übernemen
 			public function insert_posts($title,$content,$tags){
 				global $db;
 				
@@ -57,5 +58,6 @@
 			}
 		}
 	}
+	//Erzeugen einer Instanz der Klasse, sodass man auf diese drc einfaches includen zugreifn kann
 	$insert = new Insert;	
 ?>

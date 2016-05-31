@@ -11,7 +11,7 @@
 				$this->connect = $mysqli;
 			}
 			
-			public function action($query) {
+			public function action($query) {  //über diese Funktion laufen alle Aktionen auf der Datenbank
 				$result = $this->connect->query($query);
 				
 				return $result;
@@ -19,7 +19,7 @@
 			
 		}
 	}
-	
+	//eine Instanz der Verbindung zur datenbank wird erstellt, um von überall darauf zugreifen zu können
 	$db = new database;
 	
 ?>
