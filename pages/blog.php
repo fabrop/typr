@@ -61,14 +61,22 @@
 					else{
 						$sort = 'DESC';
 					}	
-					$tags = $_GET['tag'];
-					
+					if(isset($_GET['tag'])){
+						$tags = $_GET['tag'];
+					}					
+					else{
+						$all_tags = $query->get_tags();
+						for ($i = 0; $tag = mysqli_fetch_assoc($all_tags); $i++){
+							$tags[$i] = $tag['tags'];
+						}
+					}
 					$tags_processed = "";
 					foreach($tags as $var){
 						$tags_processed = $tags_processed." tags = '".$var."' OR ";
 					}
 					$tags_processed = substr($tags_processed, 0, (strlen($tags_processed) -4));
-					$page = $query->get_posts($nbr_posts,$cur_page,$sort,$tags_processed);
+					$page = $query->get_spec_posts($nbr_posts,$cur_page,$sort,$tags_processed);
+					
 					
 					while ($row = mysqli_fetch_assoc($page)){
 						echo '<article class="card article grid-sel">

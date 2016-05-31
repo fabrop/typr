@@ -13,7 +13,18 @@
 				return $db->action($query);
 			}
 			
-			public function get_posts($nbr,$page,$sort,$tags){
+			public function get_posts($nbr,$page,$sort){
+				global $db;
+				$start = ($nbr * ($page - 1));
+				$query = "
+							SELECT * 
+							FROM posts
+							ORDER BY id $sort
+							LIMIT $start,$nbr
+						";
+			}
+			
+			public function get_spec_posts($nbr,$page,$sort,$tags){
 				global $db;
 				$start = ($nbr * ($page - 1));
 				$query = "
@@ -65,6 +76,13 @@
 							SELECT id,caption,text
 							FROM home
 						";
+				
+				return $db->action($query);
+			}
+			
+			public function get_tags(){
+				global $db;
+				$query = "SELECT DISTINCT tags FROM Posts";
 				
 				return $db->action($query);
 			}
