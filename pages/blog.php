@@ -255,11 +255,14 @@
               
             </ul>
         </nav>
+        <!-- JQuery und Masonry Libraries importieren -->
         <script src="../js/jquery.js"></script>
         <script src="../js/masonry.js"></script>
         <script>
+            // container für grid setzen
             $('#content').masonry({
                 itemSelector: '.grid-sel',
+                // responsive columnWidth
                 columnWidth: '.article'
             });
         </script>
