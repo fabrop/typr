@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+        <title>Logout</title>
+        <meta charset="UTF-8">
 	</head>
 	   
 	<body>

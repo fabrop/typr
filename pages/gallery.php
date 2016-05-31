@@ -16,7 +16,7 @@
             ?>
 
             <div id="wrapper" class="clearfix">
-
+                <!-- hardcoded zum testen -->
                 <div id="content">
                     <article class="card">
                         <div class="img">
@@ -68,12 +68,14 @@
                     </article>
                 </div>
                 
+                <!-- overlay -->
                 <div id="imgModal" class="modal">
                       <span class="x">×</span>
                       <img class="modal-content" id="image">
                       <div id="caption"></div>
                 </div>
 
+                <!-- sidebar mit optionen -->
                 <div id="sidebar" class="card"> 
                     <form method="GET">
                         <p>Anzahl Bilder:</p>
@@ -102,6 +104,7 @@
         
         <nav id="pagination">
             <ul>
+                <!-- hardgecodede links zum testen -->
                 <li><a href="#">&lt&lt<span> Vorherige Seite</span></a></li>
                 <li><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
