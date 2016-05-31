@@ -1,5 +1,5 @@
      
-			
+			<!-- Navbar, welche in den öffentlichen Seiten verwendet wird. -->
 			<div id="top" class="clearfix">
                 <a href="../index.php">
                     <img id="logo" alt="blog-logo" src="../img/blog-logo.png">

@@ -2,7 +2,8 @@
 	require_once('class-database.php');
 	
 	if(!class_exists('Query')){
-		class Query{
+		class Query{//Klasse, die dazu dient, mehrere verschiedene querys in Funktionen zu speichern und diese wiedrverwendbar zu machen
+						// Es folgen Methoden der Klasse query, welche ausschließlich Abfragen auf der Datenbank übernemen
 			public function every_post(){
 				global $db;
 				$query = "
@@ -101,4 +102,5 @@
 		}
 	}
 	$query = new Query;
+	//Erzeugen einer Instanz der Klasse, sodass man auf diese druch einfaches includen zugreifn kann
 ?>

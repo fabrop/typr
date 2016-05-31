@@ -69,6 +69,6 @@
 			}
 		}
 	}
-	//Erzeugen einer Instanz der Klasse, sodass man auf diese drc einfaches includen zugreifn kann
+	//Erzeugen einer Instanz der Klasse, sodass man auf diese druch einfaches includen zugreifn kann
 	$insert = new Insert;	
 ?>
