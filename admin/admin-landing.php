@@ -36,7 +36,7 @@
 						$active_text = "txt".$i;
 						if(isset($_POST[$active_title])&&isset($_POST[$active_text])){
 							$insert->update_home($_POST[$active_title],$_POST[$active_text],$i);
-							echo $active_text;
+							
 						}
 					}
                 

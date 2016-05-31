@@ -26,7 +26,7 @@
 						WHERE id = 1
 						";
 				$raw_data = $db->action($query);
-				$contact_data = mysqli_fetch_assoc($raw_data);
+				$contact_data = mysqli_fetch_assoc($raw_data); //die startinformationen werden ausgelesen und eine übersicht daraus erstellt
 				echo '
 				<div id="card-txt">
 					<h1 id="card-name">'.$contact_data['name'].'</h1>
@@ -49,7 +49,7 @@
             $raw_numbr = $db->action($query_numbr);
             $numbr = mysqli_fetch_assoc($raw_numbr);
 
-            
+            // die einzelnen artikel über die person werden dynamisch ausgelesen, abhängig von der anzahl an artikeln
             $query = "
 							SELECT id,caption,text
 							FROM home
