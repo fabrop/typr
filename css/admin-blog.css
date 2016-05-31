@@ -70,6 +70,7 @@ th, td {
     border-bottom: 1px solid #d1d1d1;
     padding: 7px 0;
 }
+/* tabelle spatenbreite */
 td:nth-child(2), th:nth-child(2) {
     width: 80px;
 }
@@ -86,6 +87,8 @@ td:nth-child(6), th:nth-child(6) {
     width: 27px;
     position: relative;
 }
+
+/* bild über button schieben und button unsichtbar */
 td:nth-child(6) input {
     opacity: 0;
 }

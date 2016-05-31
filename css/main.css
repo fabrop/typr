@@ -1,3 +1,4 @@
+/* fonts für gesamte website importieren */
 @font-face {
     font-family: Roboto;
     src: url(../fonts/Roboto-Light.ttf);
@@ -40,6 +41,7 @@ a, a:hover, a:visited, a:link, a:active {
     background-color: rgba(0,0,0,0.5);
 }
 
+/* bug bei floats/divs beheben */
 .clearfix:after {
     content: ".";
     clear: both;

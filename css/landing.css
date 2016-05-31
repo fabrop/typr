@@ -179,7 +179,8 @@ body {
 	}
 }
 
-@media only screen and (max-width: 1300px) { /* ein/zwei artikel break */
+/* ein artikel */
+@media only screen and (max-width: 1300px) { 
 	.article {
         width: 100%;
     }

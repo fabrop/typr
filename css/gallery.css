@@ -19,6 +19,7 @@ main {
     float: left;
     position: relative;
 }
+
 #sidebar {
     width: 250px;
     margin-left: 50px;
@@ -41,7 +42,6 @@ main {
     list-style: none;
     padding: 0;
 }
-
 #sidebar {
     box-sizing: border-box;
     padding: 1px 15px 10px;
@@ -121,11 +121,12 @@ article img:hover{
     height: 150px;
 }
 
+/* animationen bei aufruf */
 .modal-content {    
     animation-name: scale;
     animation-duration: 0.2s;
 }
-@-webkit-keyframes scale {
+@-webkit-keyframes scale { 
     from {transform:scale(0)} 
     to {transform:scale(1)}
 }
@@ -153,7 +154,8 @@ article img:hover{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 850px) {
+/* sidebar nach unten */ 
+@media only screen and (max-width: 850px) { 
     #content {
         width: 100%;
     }
@@ -162,11 +164,5 @@ article img:hover{
         display: block;
         float: left;
         width: 100%;
-    }
-}
-
-@media only screen and (max-width: 750px) {
-    #pagination span {
-        display: none;
     }
 }

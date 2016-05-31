@@ -4,6 +4,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+/* sticky footer */
 main {
     flex: 1;
 }
@@ -99,13 +100,14 @@ article:hover {
     border-color: #1f7f5f;
 }
 
-
+/* artikel ganze breite */
 @media only screen and (max-width: 1400px) {
     article {
         width: 100%;
     }
 }
 
+/* sidebar nach unten */
 @media only screen and (max-width: 850px) {
     #content {
         width: 100%;
@@ -115,11 +117,5 @@ article:hover {
         display: block;
         float: left;
         width: 100%;
-    }
-}
-
-@media only screen and (max-width: 750px) {
-    #pagination span {
-        display: none;
     }
 }

@@ -95,7 +95,6 @@ textarea {
 }
 
 /* admin-navbar */
-
 #navbar {
     padding: 5px 20px 5px 20px;
 }
@@ -125,7 +124,8 @@ nav ul li {
     color: #33cc99;
 }
 
-@media only screen and (max-width: 940px) { /*breakpoint nav vertical*/
+ /* nav links vertikal */
+@media only screen and (max-width: 940px) {
     #navbar {
         padding: 5px 20px 10px 20px;
     }
