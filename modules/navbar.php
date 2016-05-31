@@ -5,7 +5,7 @@
                     <img id="logo" alt="blog-logo" src="../img/blog-logo.png">
                 </a>
 
-                <nav>
+                <nav> <!-- Links zu den anderen öffentlichen Seiten -->
                     <ul class="main-nav">
                         <li><a href="../index.php">Home</a></li>
                         <li><a href="blog.php">Blog</a></li>
