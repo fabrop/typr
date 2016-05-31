@@ -14,17 +14,19 @@
         <?php 
             require_once '../modules/admin-navbar.php'; 
             require_once '../modules/class-insert.php';
-        ?>
         
+        echo '
         <div class="section card" id="allposts">
             <a href="admin-blog.php">Posts verwalten...</a>
         </div>
-        <?php
+        ';
+            // mit formulardaten neuen post einfügen
 			if(isset($_POST['title'])&&isset($_POST['text'])&&isset($_POST['tags'])){
 				$insert->insert_posts($_POST['title'],$_POST['text'],$_POST['tags']);
 			}
         
 		?>
+        <!-- formular mit inputs für neuen blog post -->
         <div class="section card">
             <form method="post">
                 <label for="title">Titel: </label><input type="text" id="title" name="title">

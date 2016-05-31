@@ -2,7 +2,7 @@
 	if(!class_exists('database')){
 		class database{
 			public function __construct(){
-				//hier die Anmeldedaten eintragen
+				// hier die anmeldedaten eintragen
 				$username = "root";
 				$password = "";
 				$mysqli = new mysqli('localhost',$username,$password,'typr');
@@ -14,14 +14,15 @@
 				$this->connect = $mysqli;
 			}
 			
-			public function action($query) {  //über diese Funktion laufen alle Aktionen auf der Datenbank
+            // über diese funktion laufen alle aktionen auf der datenbank
+			public function action($query) {  
 				$result = $this->connect->query($query);
 				
 				return $result;
 			}
 		}
 	}
-	//eine Instanz der Verbindung zur datenbank wird erstellt, um von überall darauf zugreifen zu können
+	// eine instanz der verbindung zur datenbank wird erstellt, um von überall darauf zugreifen zu können
 	$db = new database;
 	
 ?>
