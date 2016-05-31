@@ -2,7 +2,6 @@
 	if(!class_exists('database')){
 		class database{
 			public function __construct(){
-				$mysqli = new mysqli('localhost','root','','typr'); //muss gegen Anmeldedaten Variabeln ausgetauscht werden
 				
 				if($mysqli->connect_errno){
 					printf("no connection \n",$mysqli->connect_error);

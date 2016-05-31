@@ -30,3 +30,8 @@ id
 picture
 caption
 text
+
+User
+id
+name
+pw_hash
